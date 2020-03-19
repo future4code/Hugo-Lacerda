@@ -2,30 +2,36 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Sen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>VENDA DO SEU GREGER | ESTOQUE</title>
   </head>
   <body>
+    <div class="menu-out">
+      <section id="menu">
+          <ul class="lista-horizontal">
+              <li><a href="index.html">Página Inicial</a></li>
+              <li><a href="ctrlestoque.html" class="atual">Controle de Estoque</a></li>
+              <li><a href="equipe.html">A Equipe</a></li>
+              <li><a href="adcproduto.html">Adicionar Produtos</a></li>
+              <li><a href="adcproduto.html">Computar Venda</a></li>
+              <li><a href="adcproduto.html">Histórico de Vendas</a></li>
+          </ul>
+      </section>
+  </div>
     <section>
-      <ul>
-        <li><a href="index.html">Página Inicial</a></li>
-        <li><a href="ctrlestoque.html">Controle de Estoque</a></li>
-        <li><a href="equipe.html">A Equipe</a></li>
-        <li><a href="adcproduto.html">Adicionar Produtos</a></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Tabela de Produtos</h2>
+      <h2 class="title">Tabela de Produtos</h2>
       <table>
-        <tr>
+        <tr class="tabela-head">
           <th>Produto</th>
           <th>Descrição</th>
           <th>Preço</th>
           <th>Quantidade disponível</th>
         </tr>
-        <tr>
+        <tr class="tabela-corpo">
           <td><img src="images/linhaca.jpeg" width="210px" alt="" /></td>
           <td>
             A semente de linhaça é rica ácidos graxos ômega 3 e 6. Como eles
@@ -37,7 +43,7 @@
           <td>R$20,00/kg</td>
           <td>30,00 kg</td>
         </tr>
-        <tr>
+        <tr class="tabela-corpo">
           <td><img src="images/banana.jpg" width="210px" alt="" /></td>
           <td>
             A banana nanica é rica em propriedades nutricionais, pois contém
@@ -49,7 +55,7 @@
           <td>R$05,00/dúzia</td>
           <td>40,00 dúzias</td>
         </tr>
-        <tr>
+        <tr class="tabela-corpo">
           <td><img src="images/aveia.jpg" width="210px" alt="" /></td>
           <td>
             Por ser uma fonte proteica, a aveia contém triptofano, um precursor
@@ -60,7 +66,7 @@
           <td>R$05,00/kg</td>
           <td>50,00 kg</td>
         </tr>
-        <tr>
+        <tr class="tabela-corpo">
           <td><img src="images/mirtilo.jpg" width="210px" alt="" /></td>
           <td>
             O mirtilo é uma fruta muito rica em antioxidantes, vitamina, e
@@ -70,7 +76,7 @@
           <td>R$25,00/kg</td>
           <td>40,50 kg</td>
         </tr>
-        <tr>
+        <tr class="tabela-corpo">
           <td><img src="images/curcuma.jpg" width="210px" alt="" /></td>
           <td>
             As principais propriedades da cúrcuma são a sua ação
@@ -80,7 +86,7 @@
           <td>R$09,00/kg</td>
           <td>10,00 kg</td>
         </tr>
-        <tr>
+        <tr class="tabela-corpo">
           <td><img src="images/tofu.jpg" width="210px" alt="" /></td>
           <td>
             O tofu é um tipo de queijo, feito a partir do leite de soja, que tem
@@ -92,7 +98,7 @@
           <td>R$11,00/kg</td>
           <td>20,00 kg</td>
         </tr>
-        <tr>
+        <tr class="tabela-corpo">
           <td><img src="images/tamara.jpg" width="210px" alt="" /></td>
           <td>
             Além de ser um caramelo natural, estudos laboratoriais concluíram
@@ -104,7 +110,7 @@
           <td>R$05,00/kg</td>
           <td>07,00 kg</td>
         </tr>
-        <tr>
+        <tr class="tabela-corpo">
           <td><img src="images/lentilha.jpg" width="210px" alt="" /></td>
           <td>
             Rica em fibras e proteínas, com uma índice bem alto de proteínas
@@ -114,7 +120,7 @@
           <td>R$03,00/kg</td>
           <td>43,70 kg</td>
         </tr>
-        <tr>
+        <tr class="tabela-corpo">
           <td><img src="images/kale.jpg" width="210px" alt="" /></td>
           <td>
             Suas folhas são fontes de vitamina C, um antioxidante natural,
