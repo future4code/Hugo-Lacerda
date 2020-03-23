@@ -35,7 +35,7 @@ div>p:first-child {
 }
 
 div img {
-    background: black;
+    background: white;
 }
 
 a{
@@ -62,7 +62,8 @@ a{
 }
 
 .icone {
-    height: 15px;
+    height: 20px;
+    width: 20px;
 }
 
 
