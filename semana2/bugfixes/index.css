@@ -70,7 +70,12 @@ a{
     height: 20px;
     width: 20px;
 }
-
+.icone:hover{
+    opacity: 0.4;
+}
+.icone:active{
+    opacity: 1;
+}
 
 /** 
   *
