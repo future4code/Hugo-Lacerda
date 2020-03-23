@@ -9,13 +9,19 @@
     padding: 0;
 }
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 h2 {
     background-color: #fe7e02;
     padding: 10px 5px 10px 5px;
     color: white;
     text-align: center;
 }
-
+button{
+    font-family: inherit;
+}
 input {
     height: 20px;
     width: 500px;
