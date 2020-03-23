@@ -56,7 +56,7 @@ a{
 }
 
 .container {
-    height: 500px;
+    height: 300px;
     text-align: center;
 }
 
@@ -74,6 +74,7 @@ a{
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    padding-top: 100px;
 }
 
 #container-de-descricao>ol {
