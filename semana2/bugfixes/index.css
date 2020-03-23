@@ -87,6 +87,7 @@ a{
     background-color: #2274a5;
     color: white;
     padding-top: 100px;
+    height: 240px;
 }
 
 #container-de-descricao>ol {
@@ -95,12 +96,16 @@ a{
 
 #container-para-comprar {
     background-color: #e7eb90;
+    padding-top: 60px;
 }
 
 #container-para-comprar>p {
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
+}
+#container-para-comprar>a>button {
+    margin-top: 50px;
 }
 
 
@@ -144,7 +149,7 @@ td button {
     font-size: 10px;
     color: black;
     display: block;
-    margin: 0 auto;
+    margin: 100px auto;
 }
 button:hover{
     background-color: #c44f00;
