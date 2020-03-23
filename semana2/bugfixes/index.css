@@ -152,3 +152,8 @@ button:hover{
 button:active {
     color: white;
 }
+
+input:focus,
+button:focus{
+    outline: none;
+}
