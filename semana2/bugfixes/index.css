@@ -37,6 +37,9 @@ div img {
     background: black;
 }
 
+a{
+    text-decoration: none;
+}
 .botao-amarelo {
     background-color: #ffaf43;
     width: 250px;
@@ -44,6 +47,8 @@ div img {
     border-radius: 5px;
     font-size: 20px;
     color: white;
+    display: block;
+    margin: 0 auto;
 }
 
 .botao-amarelo:hover {
