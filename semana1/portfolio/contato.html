@@ -3,26 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Hugo Lacerda | Contato</title>
   </head>
   <body>
-    <div id="menu">
-      <div>
-        <ul>
-          <li>
+    <div id="menu-out">
+      <div class="menu">
+        <ul class="lista-horizontal">
+          <li class="menu-item i1">
             <a href="index.html">
               Sobre mim
             </a>
           </li>
-          <li>
-            <a href="contato.html">
+          <li class="menu-item">
+            <a href="contato.html" class="atual">
               Contato
             </a>
           </li>
         </ul>
       </div>
     </div>
+    <form action="">
+      <label for="name">
+        Nome:
+      </label>
+      <input type="text" name="name">
+      <label for="email">
+        Email:
+      </label>
+      <input type="email" name="email">
+      <label for="message">
+        Mensagem:
+      </label>
+      <textarea name="message" id="" cols="30" rows="10"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <footer>
+      <div class="social">
+        <ul>
+          <li>
+            <i class="fab fa-linkedin"></i><a href="http://linkedin.com/in/hugo-lacerda-a711021a3 
+            " target="_"> Hugo Lacerda</a>
+          </li>
+          <li>
+            <i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/hugo.lacerda.9484" target="_"> Hugo Lacerda</a>
+          </li>
+          <li>
+            <i class="fab fa-instagram"></i><a href="https://instagram.com/hugolar?igshid=19qqt4z17opu" target="_"> @hugolar</a>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i> hugolacerdar@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/28f249fce7.js" crossorigin="anonymous"></script>
     </body>
     </html>
     

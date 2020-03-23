@@ -1,18 +1,52 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: Roboto, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    list-style: none;
 }
 
 body{
     background-color: rgb(240, 236, 236);
 }
 
+#menu-out{
+    height: 70px;
+    background-color: #333;
+}
+
+.menu{
+    display: table;
+    margin: 0 auto;
+}
+
+ul.lista-horizontal{
+    padding-top: 20px;
+}
+
+ul.lista-horizontal li{
+    display: inline;
+}
 
 .title{
     font-weight: bolder;
     text-align: center;
+    font-family:'Ubuntu';
 }
+.ap1{
+    font-size: 40px;
+}
+.ap2{
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+.ap3{
+    font-size: 35px;
+    display: block;
+    font-weight: bold;
+    text-align: right;
+}
+
 #menu{
     padding: 10px 30px;
     width: 100%;
@@ -20,9 +54,10 @@ body{
     background-color: #333;
 }
 .menu-item{
-    display: inline-block;
     padding-left: 50px;
     padding-right: 40px;
+    color: honeydew;
+    font-size: 30px;
 }
 
 .i1{
@@ -33,6 +68,16 @@ a{
     text-decoration: none;
     color: inherit;
 }
+a:hover{
+    font-weight: bolder;
+}
+a.atual{
+    color: black;
+    background-color: honeydew;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
 
 .main{
     padding-top: 100px;
@@ -44,4 +89,113 @@ a{
     text-align: justify;
     padding: 0 120px;
     font-size: 20px;
+}
+
+.instituicoes{
+    padding: 150px 70px;
+    font-size: 25px;
+    line-height: 70px;
+}
+
+.subtitulo{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.center{
+    text-align: center;
+}
+.p7{
+    padding-left: 20px;
+}
+.projetos{
+    display: table;
+    margin: 0 auto;
+    line-height: 70px;
+}
+.projetos th{
+    width: 400px;
+}
+.projetos a:hover{
+    border: #333 1px solid;
+    background-color: #333;
+    color: honeydew;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.habilidades{
+    padding: 100px 100px;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.hab{
+    display: block;
+    font-weight: bold;
+    font-size: 27px;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+.hab-desc{
+    display: block;
+    padding-left: 40px;
+    text-align: justify;
+}
+
+form{
+    padding: 100px;
+}
+
+form label,
+form input{
+    display: block;
+    line-height: 30px;
+    width: 400px;
+}
+
+form textarea,
+form input{
+    border-radius: 10px;
+}
+
+form textarea{
+    width: 600px;
+}
+
+form label{
+    font-weight: bold;
+}
+
+form button{
+display: block;
+padding: 10px 20px;
+font-family: inherit;
+border-radius: 10px;
+margin-left: 520px;
+cursor: pointer;
+font-weight: bolder;
+background-color: #333;
+color: honeydew;
+}
+form button:hover{
+    color: #333;
+    background-color: honeydew;
+}
+form button:checked{
+    color: honeydew;
+    background-color: #333;
+}
+
+footer{
+    background-color: #333;
+    color: honeydew;
+    height: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    padding-left: 40px;
+    line-height: 40px;
 }

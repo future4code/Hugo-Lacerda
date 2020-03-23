@@ -3,16 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Hugo Lacerda | Front-end Dev</title>
   </head>
   <body>
-    <div id="menu">
-      <div>
-        <ul>
+    <div id="menu-out">
+      <div class="menu">
+        <ul class="lista-horizontal">
           <li class="menu-item i1">
-            <a href="index.html">
+            <a href="index.html" class="atual">
               Sobre mim
             </a>
           </li>
@@ -25,80 +29,106 @@
       </div>
     </div>
     <div class="main">
-        <h1 class="title">Hugo Lacerda</h1>
-        <table>
-            <tr>
-                <td>
-                    <img src="images/image1.jpeg" width="250px" alt="">
-                </td>
-                <td class="brevebio">Depois de muito tempo sem saber aquilo que realmente me dava prazer em fazer, encontrei o mundo da programação em um curso de Design de Games. Certa noite me veio um insight que me levou a direcionar meus estudos a programação de mundo real. Hoje faço parte, com muito orgulho, de uma turma do curso Web Full-Stack da Future4 e curso Banco de Dados em uma faculdade referência em tecnologia na capital paulista, e sigo com plena certeza de que estou no caminho certo.</td>
-            </tr>
-            </table>
-        </div>
+      <table>
+        <tr>
+          <td class="brevebio">
+            <span class="ap1"
+              >Olá, meu nome é
+              <span class="title">Hugo Lacerda</span>.<br /><br
+            /></span>
+            <span class="ap2"
+              >Sou desenvolvedor Front-end e, atualmente, estudo para fazer
+              muito mais no mundo da tecnologia.</span
+            ><br /><br />
+            <span class="ap3">Como posso te ajudar?</span>
+          </td>
+          <td>
+            <img src="images/image1.jpeg" width="300px" alt="" />
+          </td>
+        </tr>
+      </table>
+    </div>
 
-        <div class="instituicoes">
-            <ul>
-                <li>
-                    Design de Games - Univerdidade Anhembi Morumbi (2018 - 2019)
-                </li>
-                <li>
-                    Banco de Dados - Faculdade Impacta de Tecnologia (Atual)
-                </li>
-                <li>
-                    Web Full-Stack - Future4 (Atual)
-                </li>
-            </ul>
-        </div>
+    <div class="instituicoes">
+        <p class="subtitulo">Em formação</p>
+      <ul>
+        <li class="p7">
+          <span class="subtitulo">Design de Games</span> - Univerdidade Anhembi Morumbi (2018 - 2019)
+        </li>
+        <li class="p7">
+            <span class="subtitulo">Banco de Dados</span> - Faculdade Impacta de Tecnologia (Atual)
+        </li>
+        <li class="p7">
+            <span class="subtitulo">Web Full-Stack</span> - Future4 (Atual)
+        </li>
+      </ul>
+    </div>
 
-        <div class="projetos">
-            <table>
-                <tr>
-                    <th>
-                        <a href="projeto1.html">
-                        Projeto de Seleção Future4
-                        </a>
-                    </th>
-                    <th>
-                        <a href="projeto2.html">
-                        Projeto de site administrativo (Kontzientzia Co.)
-                    </a>
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="images/projetof4.png" alt="" width="400px">
-                    </td>
-                    <td>
-                        <img src="images/sistema-loja.png" alt="" width="400px">
-                    </td>
-                </tr>
-            </table>
-        </div>
+    <div class="projetos">
+        <p class="subtitulo center">Projetos</p>
+      <table>
+        <tr>
+          <th>
+            <a href="" target="_">
+              Projeto de Seleção Future4
+            </a>
+          </th>
+          <th>
+            <a href="" target="_">
+              Projeto de site administrativo
+            </a>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/projetof4.png" alt="" width="400px" />
+          </td>
+          <td>
+            <img src="images/sistema-loja.png" alt="" width="400px" />
+          </td>
+        </tr>
+      </table>
+    </div>
 
-        <div class="habilidades">
-            <ul>
-                <li>
-                    HTML5 & CSS básicos:
-                    Aprendidas na primeira semana de curso da instituição Future4, entendo conceitos básicos e consigo desenvolver páginas simples, mas com design moderno.
-                </li>
-                <li>
-                    Python básico: <br>
-                    Importante para quem quer trabalhar na área de Dados, aprendi o básico por conta própria e atualmente estudo tópicos mais avançados.
-                </li>
-                <li>
-                    C# básico: <br>
-                    Aprendido durante o curso Design de Games e talvez a linguagem que mais usei até então. 
-                </li>
-                <li>
-                    Git: <br>
-                    Conhecimento de como realizar operações fundamentais da Git de modo a trabalhar em projetos colaborativos em grupo e organizar projetos pessoais.
-                </li>
-                <li>
-                    Experiência com trabalho em equipe usando metodologia ágil: <br>
-                    Aprendida, desenvolvida e exercitada durante o período no curso Design de Jogos, no qual trabalhei em equipe no desenvolvimento de 4 jogos.
-                </li>
-            </ul>
-        </div>
-    </body>
-    </html>
-    
+    <div class="habilidades">
+      <p class="subtitulo">Habilidades</p>
+      <ul>
+        <li>
+          <span class="hab">HTML5 & CSS3 básicos <i class="fas fa-file-code"></i></span><br>
+          <span class="hab-desc">Aprendidas na primeira semana de curso da instituição Future4. Entendo conceitos básicos e desenvolvo páginas simples, mas com um bom design.</span>
+        </li>
+        <li>
+          <span class="hab">Python básico <i class="fab fa-python"></i></span>
+          <br />
+          <span class="hab-desc">Importante para quem quer trabalhar na área de Dados. Aprendi o básico por conta própria e atualmente estudo tópicos mais avançados.</span>
+        </li>
+        <li>
+          <span class="hab">C# básico <i class="fas fa-code"></i></span>
+          <br />
+          <span class="hab-desc">Aprendido durante o curso Design de Games e a linguagem que mais usei até então.</span>
+        </li>
+        <li>
+          <span class="hab">Git <i class="fas fa-code-branch"></i></span>
+          <br />
+          <span class="hab-desc">Conhecimento de como realizar operações fundamentais da Git de modo a trabalhar em projetos colaborativos em grupo e organizar projetos pessoais.</span>
+        </li>
+        <li>
+          <span class="hab">Experiência com trabalho em equipe usando metodologia ágil <i class="fas fa-users"></i></span>
+          <br />
+          <span class="hab-desc">Aprendida, desenvolvida e exercitada durante o período no curso Design de Games, no qual trabalhei em equipe no desenvolvimento de 4 jogos. Comunicação é a chave.</span>
+        </li>
+        <li>
+          <span class="hab">Noções de boas práticas de UX & UI <i class="fas fa-user"></i></span>
+          <br />
+          <span class="hab-desc">Entendo que a praticidade deve ser uma prioridade no design de softwares, pois a navegação do usuário pelas páginas deve ser realizada sem dificuldades e o que o usuário procura deve ser encontrado com facilidade.</span>
+        </li>
+        <li>
+          <span class="hab">Inglês <i class="fas fa-language"></i></span>
+          <br />
+          <span class="hab-desc">Compreensão tanto para conversação quanto para leitura e escrita.</span>
+        </li>
+      </ul>
+    </div>
+    <script src="https://kit.fontawesome.com/28f249fce7.js" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -2,8 +2,11 @@
     font-family: Gotu;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
-
+body{
+    background-color:rgb(243, 239, 234);;
+}
 .menu-out{
     height: 8.5vh;
     background-color:#40302A;
@@ -67,6 +70,10 @@ a.last-item{
 tr.tabela-head{
     background-color: #40302A;
     color: #F2E5D5;
+}
+
+tr.tabela-head th{
+    padding: 10px 15px;
 }
 
 .title{
