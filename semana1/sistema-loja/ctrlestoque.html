@@ -5,124 +5,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Sen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gotu|Montserrat|Roboto|Roboto+Condensed|Roboto+Mono|Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>VENDA DO SEU GREGER | ESTOQUE</title>
   </head>
   <body>
     <div class="menu-out">
-      <section id="menu">
+      <div id="menu">
           <ul class="lista-horizontal">
               <li><a href="index.html">Página Inicial</a></li>
               <li><a href="ctrlestoque.html" class="atual">Controle de Estoque</a></li>
               <li><a href="equipe.html">A Equipe</a></li>
               <li><a href="adcproduto.html">Adicionar Produtos</a></li>
-              <li><a href="adcproduto.html">Computar Venda</a></li>
-              <li><a href="adcproduto.html">Histórico de Vendas</a></li>
+              <li><a href="vendas.html">Computar Venda</a></li>
+              <li><a href="historicovendas.html" class="last-item">Histórico de Vendas</a></li>
           </ul>
-      </section>
+      </div>
   </div>
     <section>
       <h2 class="title">Tabela de Produtos</h2>
       <table>
         <tr class="tabela-head">
           <th>Produto</th>
-          <th>Descrição</th>
+          <th class="desc-field">Descrição</th>
           <th>Preço</th>
           <th>Quantidade disponível</th>
         </tr>
         <tr class="tabela-corpo">
-          <td><img src="images/linhaca.jpeg" width="210px" alt="" /></td>
-          <td>
+          <td><img src="images/linhaca.jpeg" width="210px" alt="" class="product-image"></td>
+          <td class="product-description">
             A semente de linhaça é rica ácidos graxos ômega 3 e 6. Como eles
             ajudam no controle do colesterol e dos triglicérides, são bons
             aliados no combate a doenças cardiovasculares. Além disso, a linhaça
             é rica em fibras, proteínas, minerais e vitaminas C, E e do complexo
             B.
           </td>
-          <td>R$20,00/kg</td>
-          <td>30,00 kg</td>
+          <td class="product-num">R$20,00/kg</td>
+          <td class="product-num">30,00 kg</td>
         </tr>
         <tr class="tabela-corpo">
-          <td><img src="images/banana.jpg" width="210px" alt="" /></td>
-          <td>
+          <td><img src="images/banana.jpg" width="210px" alt="" class="product-image" /></td>
+          <td class="product-description">
             A banana nanica é rica em propriedades nutricionais, pois contém
             muitos nutrientes e substâncias que muito benéficas à saúde. Por
             exemplo, a banana nanica possui poucas calorias, ao mesmo tempo que
             oferece boa quantidade de fibra alimentar e carboidratos que vão
             alimentar e ainda ajudar no funcionamento do sistema digestivo.
           </td>
-          <td>R$05,00/dúzia</td>
-          <td>40,00 dúzias</td>
+          <td class="product-num">R$05,00/dúzia</td>
+          <td class="product-num">40,00 dúzias</td>
         </tr>
         <tr class="tabela-corpo">
-          <td><img src="images/aveia.jpg" width="210px" alt="" /></td>
-          <td>
+          <td><img src="images/aveia.jpg" width="210px" alt=""  class="product-image"/></td>
+          <td class="product-description">
             Por ser uma fonte proteica, a aveia contém triptofano, um precursor
             da serotonina, neurotransmissor responsável pelo controle do nosso
             humor, conhecido como amigo do bem-estar). Além disso, é muito rica
             em fibras de alta qualidade que auxiliam na redução do colesterol.
           </td>
-          <td>R$05,00/kg</td>
-          <td>50,00 kg</td>
+          <td class="product-num">R$05,00/kg</td>
+          <td class="product-num">50,00 kg</td>
         </tr>
         <tr class="tabela-corpo">
-          <td><img src="images/mirtilo.jpg" width="210px" alt="" /></td>
-          <td>
+          <td><img src="images/mirtilo.jpg" width="210px" alt=""  class="product-image"/></td>
+          <td class="product-description">
             O mirtilo é uma fruta muito rica em antioxidantes, vitamina, e
             fibras, cujas propriedades ajudam a melhorar a saúde cardiovascular,
             proteger o fígado e atrasar a deterioração da memória e da cognição.
           </td>
-          <td>R$25,00/kg</td>
-          <td>40,50 kg</td>
+          <td class="product-num">R$25,00/kg</td>
+          <td class="product-num">40,50 kg</td>
         </tr>
         <tr class="tabela-corpo">
-          <td><img src="images/curcuma.jpg" width="210px" alt="" /></td>
-          <td>
+          <td><img src="images/curcuma.jpg" width="210px" alt=""  class="product-image"/></td>
+          <td class="product-description">
             As principais propriedades da cúrcuma são a sua ação
             anti-inflamatória, antioxidante, antibacteriana e digestiva e, por
             isso, esta planta tem vários benefícios para o corpo.
           </td>
-          <td>R$09,00/kg</td>
-          <td>10,00 kg</td>
+          <td class="product-num">R$09,00/kg</td>
+          <td class="product-num">10,00 kg</td>
         </tr>
         <tr class="tabela-corpo">
-          <td><img src="images/tofu.jpg" width="210px" alt="" /></td>
-          <td>
+          <td><img src="images/tofu.jpg" width="210px" alt=""  class="product-image"/></td>
+          <td class="product-description">
             O tofu é um tipo de queijo, feito a partir do leite de soja, que tem
             muitos benefícios para a saúde como prevenir osteoporose, e por ser
             uma fonte de proteínas também é ótimo para a saúde dos músculos,
             prevenindo lesões de exercícios, e colaborando para o crescimento da
             massa muscular.
           </td>
-          <td>R$11,00/kg</td>
-          <td>20,00 kg</td>
+          <td class="product-num">R$11,00/kg</td>
+          <td class="product-num">20,00 kg</td>
         </tr>
         <tr class="tabela-corpo">
-          <td><img src="images/tamara.jpg" width="210px" alt="" /></td>
-          <td>
+          <td><img src="images/tamara.jpg" width="210px" alt=""  class="product-image"/></td>
+          <td class="product-description">
             Além de ser um caramelo natural, estudos laboratoriais concluíram
             que o consumo de tâmara é bom para reduzir marcadores inflamatórios,
             como a interleucina 6 (IL-6), no cérebro. Altos níveis de IL-6 estão
             associados a um maior risco de doenças neurodegenerativas, como a
             doença de Alzheimer.
           </td>
-          <td>R$05,00/kg</td>
-          <td>07,00 kg</td>
+          <td class="product-num">R$05,00/kg</td>
+          <td class="product-num">07,00 kg</td>
         </tr>
         <tr class="tabela-corpo">
-          <td><img src="images/lentilha.jpg" width="210px" alt="" /></td>
-          <td>
+          <td><img src="images/lentilha.jpg" width="210px" alt=""  class="product-image"/></td>
+          <td class="product-description">
             Rica em fibras e proteínas, com uma índice bem alto de proteínas
             para o número de calorias, a lentilha oferece muitos benefícios a
             saúde. Ela, inclusive, é a leguminosa mais rica em anti-oxidantes.
           </td>
-          <td>R$03,00/kg</td>
-          <td>43,70 kg</td>
+          <td class="product-num">R$03,00/kg</td>
+          <td class="product-num">43,70 kg</td>
         </tr>
         <tr class="tabela-corpo">
-          <td><img src="images/kale.jpg" width="210px" alt="" /></td>
-          <td>
+          <td><img src="images/kale.jpg" width="210px" alt=""  class="product-image"/></td>
+          <td class="product-description">
             Suas folhas são fontes de vitamina C, um antioxidante natural,
             prevenindo o envelhecimento precoce e ajudando a fortalecer o
             sistema imunológico. Fornecem ainda uma boa quantidade de vitamina
@@ -130,8 +130,8 @@
             coagulação sanguínea e fortalecendo a saúde dos ossos; e também
             fornecem bastante folato, ou ácido fólico.
           </td>
-          <td>R$05,00/maço</td>
-          <td>20,00 maços</td>
+          <td class="product-num">R$05,00/maço</td>
+          <td class="product-num">20,00 maços</td>
         </tr>
       </table>
     </section>

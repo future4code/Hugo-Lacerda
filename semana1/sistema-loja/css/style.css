@@ -1,10 +1,15 @@
 *{
-    font-family: Roboto;
+    font-family: Gotu;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-
+body{
+    background-color:rgb(243, 239, 234);;
+}
 .menu-out{
-    height: 84px;
-    background-color:#F5B754;
+    height: 8.5vh;
+    background-color:#40302A;
     width: 100%;
 }
 
@@ -21,48 +26,109 @@ ul.lista-horizontal{
 
 ul.lista-horizontal li{
     display: inline;
-    margin: 0px 50px;
+ 
 }
 
 header{
     text-align: center;
     margin: auto;
-    margin-top: 250px;
-    width: 60%;
+    padding: 250px 0px;
+    background-color: rgb(243, 239, 234);
+    height: 100%;
+    width: 100vw;
 }
-
+section{
+    background-color: rgb(243, 239, 234);
+    height: 95vh;
+}
 header h1{
     font-size: 70px;
-    color: #029773;
+    color: #731702;
 }
 header h3{
-    color: #EBCC44;
+    color: #75332A;
+    padding: 0 250px;
 }
 
 a{
     text-decoration: none;
-    color: white;
+    color: #F2E5D5;
     font-size: 17px;
+    border-right: 2px #D9AC84 solid;
+    padding: 0 25px;
+
 }
 
 a.atual{
     font-weight: bold;
 }
 
+a.last-item{
+    border: none;
+}
+
 tr.tabela-head{
-    background-color: #029773;
-    color: #B5EDC6;
+    background-color: #40302A;
+    color: #F2E5D5;
+}
+
+tr.tabela-head th{
+    padding: 10px 15px;
 }
 
 .title{
-    color: #029773;
+    color: #731702;
     text-align: center; 
+    height: 70px;
+    padding-top: 35px;
+    background-color: rgb(243, 239, 234);
+
 }
 
 tr.tabela-corpo{
-    background-color: #EDF6F7;
+    background-color: #F2E5D5;
 }
 
 .center{
     margin: auto;
+}
+
+.product-image{
+    border-radius: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-description{
+    text-align: justify;
+    padding: 0px 30px;
+}
+.desc-field{
+    width: 50%;
+}
+
+.product-num{
+    text-align: center;
+}
+
+form{
+    font-weight: bold;
+    text-align: center;
+    color: #75332A;
+}
+
+button{
+    font-family: inherit;
+    border-radius: 10px;
+    padding: 2px 5px;
+    background-color: #75332A;
+    color: #F2E5D5;
+}
+
+.img-button{
+    font-family: inherit;
+    border-radius: 10px;
+    padding: 2px 5px;
+    background-color: #75332A;
+    color: #F2E5D5;
 }
