@@ -1,0 +1,129 @@
+*{
+    margin: auto 0;
+    padding: 0;
+}
+nav > ul > li:first-child{
+    font-size: 3rem;
+}
+nav > ul > li:last-child{
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: 5vw;
+}
+nav > ul > li:last-child > input,
+nav > ul > li:last-child > button{
+    padding: 10px 15px;
+}
+nav > ul > li:last-child > button{
+    cursor: pointer;
+    width: 10vw;
+}
+nav > ul > li:last-child > input{
+    width: 20vw;
+}
+nav > ul > li{
+    padding: 20px;
+}
+
+.nav{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    background-color: brown;
+    color: white;
+}
+
+li > a{
+    text-decoration: none;
+    color: white;
+}
+.container{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, 350px);
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+}
+.media{
+    cursor: pointer;
+    padding: 20px;
+    margin: 20px;
+    border: #333 solid 1px;
+}
+.media > img,
+.media > a > img{
+    width: 100%;
+}
+
+.media > a{
+    text-decoration: none;
+    color: black;
+}
+.media > a:hover{
+    color: black;
+    font-weight: bolder;
+}
+article > span{
+    background-color: white;
+}
+
+footer{
+    background-color: brown;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.video-container{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+.desc{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+video{
+    width: 80vw;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 800px){
+    .desc{
+        font-size: 1.5rem;
+    }
+    nav > ul > li:first-child{
+        font-size: 2rem;
+    }
+    nav > ul > li:last-child > button{
+        cursor: pointer;
+        width: 15vw;
+    }
+    nav > ul > li:last-child > input{
+        width: 15vw;
+    }
+}
+@media screen and (max-width: 400px){
+    .desc{
+        font-size: 1.2rem;
+    }
+    nav > ul > li:first-child{
+        font-size: 1.5rem;
+    }
+    nav > ul > li:last-child > button{
+        display: none;
+    }
+    nav > ul > li:last-child > input{
+        width: 20vw;
+    }
+    .container{
+        grid-template-columns: repeat(auto-fill, 370px);
+    }
+
+    video{
+        width: 100vw;
+    }
+}
