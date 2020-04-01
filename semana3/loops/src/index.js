@@ -61,3 +61,54 @@ for (let i = 0; i < array.length; i++) {
 
 console.log(arrayFrase);
 // d.final
+
+// Desafios 
+// Desafio 1
+// 0
+// 00
+// 000
+// 0000
+
+// Desafio 2
+
+// let advinha = Number(prompt('Digite um número para o seu amigo tentar advinhar:'))
+
+// let tentativa;
+// let numTentativas = 0;
+// while(tentativa != advinha){
+//     tentativa = Number(prompt('Tente advinhar o número:'));
+//     numTentativas ++;
+//     if(tentativa > advinha){
+//         console.log('O número chutado foi', tentativa);
+//         console.log('Errrrrrrrou, é menor');
+//     }else if(tentativa < advinha){
+//         console.log('O número chutado foi', tentativa);
+//         console.log('Errrrrrrrou, é maior');
+//     }
+// }
+
+// console.log('Acertou!! \nO número de tentativas foi ', numTentativas);
+
+// Desafio 3
+
+let numPC = Math.floor((Math.random() * 100) + 1);
+console.log(numPC);
+let user;
+
+let numTentativas = 0;
+
+while(user != numPC){
+    user = Number(prompt('Tente advinhar o número:'));
+    numTentativas ++;
+    if(user > numPC){
+        console.log('O número chutado foi', user);
+        console.log('Errrrrrrrou, é menor');
+    }else if(user < numPC){
+        console.log('O número chutado foi', user);
+        console.log('Errrrrrrrou, é maior');
+    }
+}
+
+console.log('Acertou!! \nO número de tentativas foi ', numTentativas);
+
+// Foi fácil fazer a alteração. ;)
