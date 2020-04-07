@@ -109,3 +109,9 @@ footer button{
         grid-template-columns: 1fr;
     }
 }
+@media screen and (max-width: 600px){
+    header{
+        flex-direction: column;
+        font-size: 1.5rem;
+    }
+}
