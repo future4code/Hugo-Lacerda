@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Simple Planner</title>
+</head>
+<body>
+    <header>
+        <label for="novaTarefa">Nova Tarefa:</label><input type="text" id="novaTarefa">
+        <select name="qualDia" id="qualDia">
+            <option value="segunda">Segunda</option>
+            <option value="terça">Terça</option>
+            <option value="quarta">Quarta</option>
+            <option value="quinta">Quinta</option>
+            <option value="sexta">Sexta</option>
+            <option value="sabado">Sábado</option>
+            <option value="domingo">Domingo</option>
+        </select>
+        <select name="hora" id="hora">
+            <option value="00h">00h</option>
+            <option value="01h">01h</option>
+            <option value="02h">02h</option>
+            <option value="03h">03h</option>
+            <option value="04h">04h</option>
+            <option value="05h">05h</option>
+            <option value="06h">06h</option>
+            <option value="07h">07h</option>
+            <option value="08h">08h</option>
+            <option value="09h">09h</option>
+            <option value="10h">10h</option>
+            <option value="11h">11h</option>
+            <option value="12h">12h</option>
+            <option value="13h">13h</option>
+            <option value="14h">14h</option>
+            <option value="15h">15h</option>
+            <option value="16h">16h</option>
+            <option value="17h">17h</option>
+            <option value="18h">18h</option>
+            <option value="19h">19h</option>
+            <option value="20h">20h</option>
+            <option value="21h">21h</option>
+            <option value="22h">22h</option>
+            <option value="23h">23h</option>
+        </select>
+        <button id="enviarTarefa">Criar Tarefa!</button>
+    </header>
+    <main id="container">
+        <section id="segunda">
+            <h1>Segunda</h1>
+            <ul id="listaSegunda"></ul>
+        </section>
+        <section id="terça">
+            <h1>Terça</h1>
+            <ul id="listaTerça"></ul>
+        </section>
+        <section id="quarta">
+            <h1>Quarta</h1>
+            <ul id="listaQuarta"></ul>
+        </section>
+        <section id="quinta">
+            <h1>Quinta</h1>
+            <ul id="listaQuinta"></ul>
+        </section>
+        <section id="sexta">
+            <h1>Sexta</h1>
+            <ul id="listaSexta"></ul>
+        </section>
+        <section id="sábado">
+            <h1>Sábado</h1>
+            <ul id="listaSabado"></ul>
+        </section>
+        <section id="domingo">
+            <h1>Domingo</h1>
+            <ul id="listaDomingo"></ul>
+        </section>
+    </main>
+    <footer><button id="limpar">Limpar Tarefas</button></footer>
+</body>
+</html>

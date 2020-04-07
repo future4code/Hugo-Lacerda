@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+header:c{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+header *{
+    display: block;
+    margin: 0 10px;
+}
+
+header input{
+    outline: none;
+    border: none;
+    border-bottom: 1px dotted #333;
+}
+
+header input:focus{
+    border-bottom: 1.5px dotted #333;
+}
+
+header select{
+    outline: none;
+    border: 1px dotted #333;
+    border-radius: 10%;
+    padding: 5px;
+}
+
+header button{
+    outline: none;
+    border: 1px dotted whitesmoke;
+    padding: 5px 10px;
+    background-color: beige;
+    border-radius: 10%;
+}
+header button:active,
+footer button:active{
+    outline: none;
+    border: 1px dotted black;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+    /* grid-template-columns: repeat(auto-fill, 350px); */
+    grid-template-rows: 1fr 1fr;
+    margin: 20px 40px;
+    gap: 20px;
+}
+
+#container section{
+    height: 300px;
+    padding: 0 10px;
+    border-left: black dotted 1px;
+    border-right: black dotted 1px;
+    border-radius: 1%;
+}
+
+#container ul{
+    margin: 20px;
+    font-size: 20px;    
+}
+
+.itemCompleto{
+    text-decoration: line-through;
+}
+
+footer{
+    text-align: center;
+    margin: 40px;
+}
+
+footer button{
+    outline: none;
+    border: 1px dotted whitesmoke;
+    padding: 10px 20px;
+    background-color: lightcoral;
+    border-radius: 10%;
+}
+
+@media screen and (max-width: 375px){
+    header{
+        flex-direction: column;
+        font-size: 1.5rem;
+    }
+
+    header *{
+        margin: 10px 0;
+    }
+
+    header button,
+    footer button{
+        padding: 20px 10px;
+        width: 100%;
+    }
+
+    #container{
+        margin: 10px 5px;
+        grid-template-columns: 1fr;
+    }
+}
