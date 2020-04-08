@@ -34,16 +34,16 @@ function publishPost(post){
         haveImage = true;
     }
     let h3 = document.createElement('h3');
-    let p = document.createElement('p');
+    let div = document.createElement('div');
     h1.innerText = post.title;
     h3.innerText = post.author;
-    p.innerText = post.content;
+    div.innerText = post.content;
     article.appendChild(h1);
     article.appendChild(h3);
     if(haveImage){
     article.appendChild(image);
     }
-    article.appendChild(p);
+    article.appendChild(div);
     postSect.appendChild(article);
     haveImage = false;
 }
