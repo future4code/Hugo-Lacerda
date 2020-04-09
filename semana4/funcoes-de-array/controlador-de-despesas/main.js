@@ -8,6 +8,10 @@ let tipoFiltro = document.getElementById('tipo');
 let valMin = document.getElementById('valor-min');
 let valMax = document.getElementById('valor-max');
 
+let extrato = document.getElementById('extrato');
+let extratoLi = document.getElementById('extrato-lista');
+let valorTotal = document.getElementById('valor-total');
+let total = 0;
 function adicionarAoArray(){
     if(valorCadastro.value !== '' && tipoDespesa.value !== '' && descricao.value !== ''){
         let obj = {valor: valorCadastro.value,
@@ -19,7 +23,8 @@ function adicionarAoArray(){
         tipoDespesa.value = '';
         descricao.value = '';
 
-        adicionarALista(arrayMestre)
+        adicionarALista(arrayMestre);
+        adicionarAoExtrato(arrayMestre);
     }else{
         alert('Preencha todos os campos, por gentileza.')
     }
@@ -34,12 +39,27 @@ function adicionarALista(array){
     }
 }
 
+function adicionarAoExtrato(array){
+    extratoLi.innerText = '';
+    valorTotal.innerText = '';
+    total = 0;
+    for(obj of array){
+        let li = document.createElement('li');
+        li.innerText = `Valor: R$${obj.valor}.00 | Tipo: ${obj.tipo}`;
+        extratoLi.appendChild(li);
+        total+= Number(obj.valor);
+    }
+
+    valorTotal.innerText = `Valor total: R$${total}.00`;
+
+}
+
 
 
 function filtrado(){
 const filtro = arrayMestre.filter((obj, i, array) => {
             
-    if(obj.valor >= valMin.value && obj.valor <= valMax.value && obj.tipo === tipoFiltro.value){
+    if(Number(obj.valor) >= Number(valMin.value) && Number(obj.valor) <= Number(valMax.value) && obj.tipo === tipoFiltro.value){
         return true;
     }
 
