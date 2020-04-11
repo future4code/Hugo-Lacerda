@@ -174,33 +174,64 @@
 
 // console.log(arrayVezes8);
 
-var array = [
-	{ nome: "Pedro", idade: 20 },
-	{ nome: "João", idade: 10 },
-	{ nome: "Paula", idade: 12 },
-	{ nome: "Artur", idade: 89 } 
-]
+// var array = [
+// 	{ nome: "Pedro", idade: 20 },
+// 	{ nome: "João", idade: 10 },
+// 	{ nome: "Paula", idade: 12 },
+// 	{ nome: "Artur", idade: 89 } 
+// ]
+// a.
+// function adultos(array){
+// const adultosOnly = array.filter((pessoa) =>{
+//     if(pessoa.idade >= 20){
+//         return true;
+//     }
 
-function adultos(array){
-const adultosOnly = array.filter((pessoa) =>{
-    if(pessoa.idade >= 20){
-        return true;
-    }
+//     return false
+// })
 
-    return false
-})
+// return adultosOnly;
+// }
+// b.
+// function jovens(array){
+// const jovensOnly = array.filter((pessoa) =>{
+//     if(pessoa.idade < 20){
+//         return true;
+//     }
 
-return adultosOnly;
+//     return false
+// })
+
+// return jovensOnly;
+// }
+
+// 3.
+const array = [1, 2, 3, 4, 5, 6];
+// a.
+function arrayPor2(array){
+    valoresDobrados = array.map((num)=>{
+        return num * 2;
+    })
+
+    return valoresDobrados;
 }
+// b.
+function arrayPor3Strigfy(array){
+    valoresTriplicadosStr = array.map((num)=>{
+        return (num * 3).toString();
+    })
 
-function jovens(array){
-const jovensOnly = array.filter((pessoa) =>{
-    if(pessoa.idade < 20){
-        return true;
-    }
+    return valoresTriplicadosStr;
+}
+// c.
+function arrayParouImpar(array){
+    parOuImpar = array.map((num)=>{
+        if(num % 2 === 0){
+            return `${num} é par`;
+        }else{
+            return `${num} é impar`;
+        }
+    })
 
-    return false
-})
-
-return jovensOnly;
+    return parOuImpar;
 }
