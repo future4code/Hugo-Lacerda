@@ -140,24 +140,36 @@
 // console.log(`Venha assistir ao filme ${nausicaa.titulo}, de ${nausicaa.ano}, dirigido por ${nausicaa.diretor} e estrelado por ${nausicaa.estrelando}`);
 
 // 4. 
-const pessoa = {
-    nome: 'Random Silva',
-    idade: 1234,
-    email: 'vish@vish.com',
-    endereco: 'Rua Perdido, 340'
-};
+// const pessoa = {
+//     nome: 'Random Silva',
+//     idade: 1234,
+//     email: 'vish@vish.com',
+//     endereco: 'Rua Perdido, 340'
+// };
 
-function anonimizarPessoa(objeto){
+// function anonimizarPessoa(objeto){
     
-    let pessoaAnonima = new Object();
+//     let pessoaAnonima = new Object();
 
-    pessoaAnonima.nome = 'ANÔNIMX';
-    pessoaAnonima.idade = objeto.idade;
-    pessoaAnonima.email = objeto.email;
-    pessoaAnonima.endereco = objeto.endereco;
+//     pessoaAnonima.nome = 'ANÔNIMX';
+//     pessoaAnonima.idade = objeto.idade;
+//     pessoaAnonima.email = objeto.email;
+//     pessoaAnonima.endereco = objeto.endereco;
 
-    return pessoaAnonima;
+//     return pessoaAnonima;
+// }
+// // procurei uma forma de clonar sem alterar um modificando o outro, mas não encontrei um modo simples
+// console.log(anonimizarPessoa(pessoa));
+// console.log(pessoa);
+
+// Bloco 3, parte única
+// 1. Por meio de um laço for, um laço for of e um while.
+
+let array = [1,2,3,4,5,3,2,3,5];
+let arrayVezes8 = new Array();
+for(let num of array){
+    num = num * 8;
+    arrayVezes8.push(num);
 }
-// procurei uma forma de clonar sem alterar um modificando o outro, mas não encontrei um modo simples
-console.log(anonimizarPessoa(pessoa));
-console.log(pessoa);
+
+console.log(arrayVezes8);
