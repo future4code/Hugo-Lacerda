@@ -14,3 +14,11 @@
 // c. true
 // d. true
 // e. true
+
+// 2.
+const quantidadeNumPares = Number(prompt());
+let i = 0;
+while(i < quantidadeNumPares){
+    console.log(i*2);
+    i++;
+}
