@@ -6,3 +6,11 @@
 // 3. O presente trecho de código começa declarando três variáveis, sendo um array chamado número com 14 elementos numéricos, e dois arrays vazios array1 e array2, respectivamente. Após, um laço for of é usado para percorrer o array numeros, passando uma condicional if else que checa se o valor é par ou ímpar. Se par, o valor é adicionado ao array1, se não, é adicionado ao array2. Por fim, o console imprime a quantidade total de números no array numeros, a quantidade de números no array1 e a quantidade de números no array2.
 
 // 4. O trecho de código tem início com a declaração de um array numeros composto por 25 valores numéricos. Seguindo, é declarada uma variável numero1, que recebe o valor infinito, e uma variável numero2, que recebe o valor zero. O array números é então percorrido por um laçõ for of que usa dois blocos ifs: o primeiro checa se o valor de numero (elemento de numeros) é menor do que o valor de numero1 e, caso true, o valor de numero é atribuido a numero1; e o segundo if checa se o valor de numero é maior do que o valor de numero2 e, caso positivo, atribui o valor de número a numero2. Basicamente, o numero1 equivalerá ao menor número do array numeros no final, enquanro numero2 equivalerá ao menor. Os valores de numero1 e numero2 são impressos no final do código. 
+
+// Bloco 1, parte 2
+// 1.
+// a. false
+// b. false
+// c. true
+// d. true
+// e. true
