@@ -130,12 +130,34 @@
 // }
 
 // 3.
+// const nausicaa = {
+//     titulo: 'Nausicaä do Vale do Vento',
+//     ano: 1987,
+//     diretor: 'Hayao Miyazaki',
+//     estrelando: ['Sumi Shinamoto', 'Goro Naya', 'Yoji Matsuda', 'Yoshiko Sakakibara']
+// };
 
-const nausicaa = {
-    titulo: 'Nausicaä do Vale do Vento',
-    ano: 1987,
-    diretor: 'Hayao Miyazaki',
-    estrelando: ['Sumi Shinamoto', 'Goro Naya', 'Yoji Matsuda', 'Yoshiko Sakakibara']
+// console.log(`Venha assistir ao filme ${nausicaa.titulo}, de ${nausicaa.ano}, dirigido por ${nausicaa.diretor} e estrelado por ${nausicaa.estrelando}`);
+
+// 4. 
+const pessoa = {
+    nome: 'Random Silva',
+    idade: 1234,
+    email: 'vish@vish.com',
+    endereco: 'Rua Perdido, 340'
+};
+
+function anonimizarPessoa(objeto){
+    
+    let pessoaAnonima = new Object();
+
+    pessoaAnonima.nome = 'ANÔNIMX';
+    pessoaAnonima.idade = objeto.idade;
+    pessoaAnonima.email = objeto.email;
+    pessoaAnonima.endereco = objeto.endereco;
+
+    return pessoaAnonima;
 }
-
-console.log(`Venha assistir ao filme ${nausicaa.titulo}, de ${nausicaa.ano}, dirigido por ${nausicaa.diretor} e estrelado por ${nausicaa.estrelando}`)
+// procurei uma forma de clonar sem alterar um modificando o outro, mas não encontrei um modo simples
+console.log(anonimizarPessoa(pessoa));
+console.log(pessoa);
