@@ -39,38 +39,67 @@
 // }
 
 // 4.
-function comparaDoisNums(num1,num2){
-    let maior;
-    let menor;
-    let diferença;
+// function comparaDoisNums(num1,num2){
+//     let maior;
+//     let menor;
+//     let diferença;
 
-    if(num1 > num2){
-        maior = num1;
-        menor = num2;
-        console.log(`O maior é: ${maior}`)
-    }else if(num2 > num1){
-        maior = num2;
-        menor = num1;
-        console.log(`O maior é: ${maior}`)
-    }else{
-        maior = num1;
-        menor = maior;
-        console.log(`Não há maior: ${num1} e ${num2} são iguais`)
-    }
+//     if(num1 > num2){
+//         maior = num1;
+//         menor = num2;
+//         console.log(`O maior é: ${maior}`)
+//     }else if(num2 > num1){
+//         maior = num2;
+//         menor = num1;
+//         console.log(`O maior é: ${maior}`)
+//     }else{
+//         maior = num1;
+//         menor = maior;
+//         console.log(`Não há maior: ${num1} e ${num2} são iguais`)
+//     }
 
-    if(num1%num2 === 0){
-        console.log(`${num1} é divisível por ${num2}`)
-    }else{
-        console.log(`${num1} não é divisível por ${num2}`)
-    }
+//     if(num1%num2 === 0){
+//         console.log(`${num1} é divisível por ${num2}`)
+//     }else{
+//         console.log(`${num1} não é divisível por ${num2}`)
+//     }
 
-    if(num2%num1 === 0){
-        console.log(`${num2} é divisível por ${num1}`)
-    }else{
-        console.log(`${num2} não é divisível por ${num1}`)
-    }
+//     if(num2%num1 === 0){
+//         console.log(`${num2} é divisível por ${num1}`)
+//     }else{
+//         console.log(`${num2} não é divisível por ${num1}`)
+//     }
 
-    diferença = maior - menor;
+//     diferença = maior - menor;
 
-    console.log(`A diferença entre eles é ${diferença}`);
+//     console.log(`A diferença entre eles é ${diferença}`);
+// }
+
+// Bloco 2, parte 1
+// 1. 
+// Para este exercício havia chegado a uma solução com o aprendido em aula, mas ela não funcionava em todos os casos. Achei essa mais precisa usando set (que não permite repetições) e depois convertendo novamente a um array.
+
+function segundoMenorEMaior(array){
+    let segundoMaior;
+    let segundoMenor;
+
+    array2 = array.sort(function(x,y){
+        return x-y;
+    })
+
+    arrayUni1 = [... new Set(array2)];
+    
+    segundoMenor = arrayUni1[1];
+
+    array3 = array.sort(function(x,y){
+        return y-x;
+    })
+
+    arrayUni2 = [... new Set(array3)];
+
+    segundoMaior = arrayUni2[1];
+
+    console.log(`O segundo maior é ${segundoMaior} e o segundo menor é ${segundoMenor}`);
 }
+
+segundoMenorEMaior([0,7,6,5,4,3,2,1,0]);
