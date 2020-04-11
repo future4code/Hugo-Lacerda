@@ -165,11 +165,42 @@
 // Bloco 3, parte única
 // 1. Por meio de um laço for, um laço for of e um while.
 
-let array = [1,2,3,4,5,3,2,3,5];
-let arrayVezes8 = new Array();
-for(let num of array){
-    num = num * 8;
-    arrayVezes8.push(num);
+// let array = [1,2,3,4,5,3,2,3,5];
+// let arrayVezes8 = new Array();
+// for(let num of array){
+//     num = num * 8;
+//     arrayVezes8.push(num);
+// }
+
+// console.log(arrayVezes8);
+
+var array = [
+	{ nome: "Pedro", idade: 20 },
+	{ nome: "João", idade: 10 },
+	{ nome: "Paula", idade: 12 },
+	{ nome: "Artur", idade: 89 } 
+]
+
+function adultos(array){
+const adultosOnly = array.filter((pessoa) =>{
+    if(pessoa.idade >= 20){
+        return true;
+    }
+
+    return false
+})
+
+return adultosOnly;
 }
 
-console.log(arrayVezes8);
+function jovens(array){
+const jovensOnly = array.filter((pessoa) =>{
+    if(pessoa.idade < 20){
+        return true;
+    }
+
+    return false
+})
+
+return jovensOnly;
+}
