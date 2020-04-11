@@ -24,16 +24,53 @@
 // }
 
 // 3. 
-function trianguloId(a,b,c){
-    let tipo;
+// function trianguloId(a,b,c){
+//     let tipo;
 
-    if(a === b && a === c){
-        tipo = 'equilátero';
-    }else if((a === b && a !==c) || (b === c && b !== a) || (c === a && c !== b)){
-        tipo = 'isóceles';
+//     if(a === b && a === c){
+//         tipo = 'equilátero';
+//     }else if((a === b && a !==c) || (b === c && b !== a) || (c === a && c !== b)){
+//         tipo = 'isóceles';
+//     }else{
+//         tipo = 'escaleno';
+//     }
+
+//     return tipo;
+// }
+
+// 4.
+function comparaDoisNums(num1,num2){
+    let maior;
+    let menor;
+    let diferença;
+
+    if(num1 > num2){
+        maior = num1;
+        menor = num2;
+        console.log(`O maior é: ${maior}`)
+    }else if(num2 > num1){
+        maior = num2;
+        menor = num1;
+        console.log(`O maior é: ${maior}`)
     }else{
-        tipo = 'escaleno';
+        maior = num1;
+        menor = maior;
+        console.log(`Não há maior: ${num1} e ${num2} são iguais`)
     }
 
-    return tipo;
+    if(num1%num2 === 0){
+        console.log(`${num1} é divisível por ${num2}`)
+    }else{
+        console.log(`${num1} não é divisível por ${num2}`)
+    }
+
+    if(num2%num1 === 0){
+        console.log(`${num2} é divisível por ${num1}`)
+    }else{
+        console.log(`${num2} não é divisível por ${num1}`)
+    }
+
+    diferença = maior - menor;
+
+    console.log(`A diferença entre eles é ${diferença}`);
 }
