@@ -104,9 +104,13 @@
 
 // segundoMenorEMaior([0,7,6,5,4,3,2,1,0]);
 
-// 2. 
-let halloLabenu_ = function(){
-    alert('Hello, Labenu_');
-}
+// 2.
 
-halloLabenu_();
+// let halloLabenu_ = function(){
+//     alert('Hello, Labenu_');
+// }
+
+// halloLabenu_();
+
+// Bloco 2, parte 2
+// 1. Arrays e objetos são coleções que guardam informações de modo organizado e ordenado. É interessante o uso tanto de objetos quanto de arrays, portanto, quando queremos armazenar dados correlacionados. Um dos exemplos do uso dos dois juntos pode ser um array contendo vários objetos referentes, cada um, a postagens em um site, separando seus índices por título, autor e conteúdo, por exemplo. Desse modo, o armazenamento fica mais fácil do que ter vários objetos soltos ou, ainda, várias informações soltas e que dizem respeito a um mesmo objeto.
