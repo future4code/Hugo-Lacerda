@@ -15,10 +15,25 @@
 // d. true
 // e. true
 
-// 2.
-const quantidadeNumPares = Number(prompt());
-let i = 0;
-while(i < quantidadeNumPares){
-    console.log(i*2);
-    i++;
+// 2. Não, porque o valor de quandidadeNumPares não havia sido inicializado e o valor de i não estava sendo incrementado. Além disso, a condição deveria ser somente <, e não <=, pois estava dando um número a mais. Correção:
+// const quantidadeNumPares = Number(prompt());
+// let i = 0;
+// while(i < quantidadeNumPares){
+//     console.log(i*2);
+//     i++;
+// }
+
+// 3. 
+function trianguloId(a,b,c){
+    let tipo;
+
+    if(a === b && a === c){
+        tipo = 'equilátero';
+    }else if((a === b && a !==c) || (b === c && b !== a) || (c === a && c !== b)){
+        tipo = 'isóceles';
+    }else{
+        tipo = 'escaleno';
+    }
+
+    return tipo;
 }
