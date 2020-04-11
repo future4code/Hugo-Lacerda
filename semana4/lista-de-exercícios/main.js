@@ -79,27 +79,34 @@
 // 1. 
 // Para este exercício havia chegado a uma solução com o aprendido em aula, mas ela não funcionava em todos os casos. Achei essa mais precisa usando set (que não permite repetições) e depois convertendo novamente a um array.
 
-function segundoMenorEMaior(array){
-    let segundoMaior;
-    let segundoMenor;
+// function segundoMenorEMaior(array){
+//     let segundoMaior;
+//     let segundoMenor;
 
-    array2 = array.sort(function(x,y){
-        return x-y;
-    })
+//     array2 = array.sort(function(x,y){
+//         return x-y;
+//     })
 
-    arrayUni1 = [... new Set(array2)];
+//     arrayUni1 = [... new Set(array2)];
     
-    segundoMenor = arrayUni1[1];
+//     segundoMenor = arrayUni1[1];
 
-    array3 = array.sort(function(x,y){
-        return y-x;
-    })
+//     array3 = array.sort(function(x,y){
+//         return y-x;
+//     })
 
-    arrayUni2 = [... new Set(array3)];
+//     arrayUni2 = [... new Set(array3)];
 
-    segundoMaior = arrayUni2[1];
+//     segundoMaior = arrayUni2[1];
 
-    console.log(`O segundo maior é ${segundoMaior} e o segundo menor é ${segundoMenor}`);
+//     console.log(`O segundo maior é ${segundoMaior} e o segundo menor é ${segundoMenor}`);
+// }
+
+// segundoMenorEMaior([0,7,6,5,4,3,2,1,0]);
+
+// 2. 
+let halloLabenu_ = function(){
+    alert('Hello, Labenu_');
 }
 
-segundoMenorEMaior([0,7,6,5,4,3,2,1,0]);
+halloLabenu_();
