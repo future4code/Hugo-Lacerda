@@ -116,15 +116,26 @@
 // 1. Arrays e objetos são coleções que guardam informações de modo organizado e ordenado. É interessante o uso tanto de objetos quanto de arrays, portanto, quando queremos armazenar dados correlacionados. Um dos exemplos do uso dos dois juntos pode ser um array contendo vários objetos referentes, cada um, a postagens em um site, separando seus índices por título, autor e conteúdo, por exemplo. Desse modo, o armazenamento fica mais fácil do que ter vários objetos soltos ou, ainda, várias informações soltas e que dizem respeito a um mesmo objeto.
 
 // 2.
-function criarRetangulo(lado1, lado2){
-    let perimetro = (lado1 + lado2) * 2;
-    let area = lado1 * lado2;
-    const retangulo = {
-        largura: lado1,
-        altura: lado2,
-        perimetro: perimetro,
-        area: area
-    }
+// function criarRetangulo(lado1, lado2){
+//     let perimetro = (lado1 + lado2) * 2;
+//     let area = lado1 * lado2;
+//     const retangulo = {
+//         largura: lado1,
+//         altura: lado2,
+//         perimetro: perimetro,
+//         area: area
+//     }
 
-    return retangulo;
+//     return retangulo;
+// }
+
+// 3.
+
+const nausicaa = {
+    titulo: 'Nausicaä do Vale do Vento',
+    ano: 1987,
+    diretor: 'Hayao Miyazaki',
+    estrelando: ['Sumi Shinamoto', 'Goro Naya', 'Yoji Matsuda', 'Yoshiko Sakakibara']
 }
+
+console.log(`Venha assistir ao filme ${nausicaa.titulo}, de ${nausicaa.ano}, dirigido por ${nausicaa.diretor} e estrelado por ${nausicaa.estrelando}`)
