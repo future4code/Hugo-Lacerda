@@ -237,35 +237,72 @@
 // }
 
 // 4.
-const pessoas = [
-	{ nome: "Paula", idade: 12, altura: 1.8},
-	{ nome: "João", idade: 20, altura: 1.3},
-	{ nome: "Pedro", idade: 15, altura: 1.9},
-	{ nome: "Luciano", idade: 22, altura: 1.8},
-	{ nome: "Artur", idade: 10, altura: 1.2},
-	{ nome: "Soter", idade: 70, altura: 1.9}
-]
-// a.
-function permitidas(array){
-    let pessoasPermitidas = array.filter(pessoa =>{
-        if(pessoa.altura >= 1.5 && pessoa.idade > 14 && pessoa.idade < 60){
-            return true;
-        }
+// const pessoas = [
+// 	{ nome: "Paula", idade: 12, altura: 1.8},
+// 	{ nome: "João", idade: 20, altura: 1.3},
+// 	{ nome: "Pedro", idade: 15, altura: 1.9},
+// 	{ nome: "Luciano", idade: 22, altura: 1.8},
+// 	{ nome: "Artur", idade: 10, altura: 1.2},
+// 	{ nome: "Soter", idade: 70, altura: 1.9}
+// ]
+// // a.
+// function permitidas(array){
+//     let pessoasPermitidas = array.filter(pessoa =>{
+//         if(pessoa.altura >= 1.5 && pessoa.idade > 14 && pessoa.idade < 60){
+//             return true;
+//         }
         
-        return false;
-    })
+//         return false;
+//     })
 
-    return pessoasPermitidas;
-}
-// b.
-function naoPermitidas(array){
-    let pessoasProibidas = array.filter(pessoa =>{
-        if(pessoa.altura < 1.5 || (pessoa.idade <= 14 || pessoa.idade >= 60)){
-            return true;
-        }
+//     return pessoasPermitidas;
+// }
+// // b.
+// function naoPermitidas(array){
+//     let pessoasProibidas = array.filter(pessoa =>{
+//         if(pessoa.altura < 1.5 || (pessoa.idade <= 14 || pessoa.idade >= 60)){
+//             return true;
+//         }
         
-        return false;
-    })
+//         return false;
+//     })
 
-    return pessoasProibidas;
-}
+//     return pessoasProibidas;
+// }
+
+// 5. 
+const consultas = [
+	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+];
+
+function respostasAutomaticas(array){
+
+    const autoMsgs = array.map((paciente) =>{
+        let tratamento1;
+        let tratamento2;
+        switch(paciente.genero){
+            case 'feminino':
+                tratamento1 = 'Sra.';
+                tratamento2 = 'lembrá-la';
+                break;
+            case 'masculino':
+                tratamento1 = 'Sr.'
+                tratamento2 = 'lembrá-lo'
+            default:
+                tratamento1 = '';
+                tratamento2 = 'lembrá-lo(a)';
+                break;
+        }
+
+        if(paciente.cancelada){
+                return `Olá, ${tratamento1} ${paciente.nome}. Infelizmente, sua consulta para o dia ${paciente.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para reagendá-la.`;
+            }else{
+                return `Olá, ${tratamento1} ${paciente.nome}. Estamos enviando esta mensagem para ${tratamento2} da sua consulta no dia ${paciente.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`
+            }  
+        })
+
+        return autoMsgs;
+    }
