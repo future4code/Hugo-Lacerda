@@ -271,38 +271,54 @@
 // }
 
 // 5. 
-const consultas = [
-	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
-	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
-	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
-	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
-];
+// const consultas = [
+// 	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+// 	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+// 	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+// 	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+// ];
 
-function respostasAutomaticas(array){
+// function respostasAutomaticas(array){
 
-    const autoMsgs = array.map((paciente) =>{
-        let tratamento1;
-        let tratamento2;
-        switch(paciente.genero){
-            case 'feminino':
-                tratamento1 = 'Sra.';
-                tratamento2 = 'lembrá-la';
-                break;
-            case 'masculino':
-                tratamento1 = 'Sr.'
-                tratamento2 = 'lembrá-lo'
-            default:
-                tratamento1 = '';
-                tratamento2 = 'lembrá-lo(a)';
-                break;
-        }
+//     const autoMsgs = array.map((paciente) =>{
+//         let tratamento1;
+//         let tratamento2;
+//         switch(paciente.genero){
+//             case 'feminino':
+//                 tratamento1 = 'Sra.';
+//                 tratamento2 = 'lembrá-la';
+//                 break;
+//             case 'masculino':
+//                 tratamento1 = 'Sr.'
+//                 tratamento2 = 'lembrá-lo'
+//             default:
+//                 tratamento1 = '';
+//                 tratamento2 = 'lembrá-lo(a)';
+//                 break;
+//         }
 
-        if(paciente.cancelada){
-                return `Olá, ${tratamento1} ${paciente.nome}. Infelizmente, sua consulta para o dia ${paciente.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para reagendá-la.`;
-            }else{
-                return `Olá, ${tratamento1} ${paciente.nome}. Estamos enviando esta mensagem para ${tratamento2} da sua consulta no dia ${paciente.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`
-            }  
-        })
+//         if(paciente.cancelada){
+//                 return `Olá, ${tratamento1} ${paciente.nome}. Infelizmente, sua consulta para o dia ${paciente.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para reagendá-la.`;
+//             }else{
+//                 return `Olá, ${tratamento1} ${paciente.nome}. Estamos enviando esta mensagem para ${tratamento2} da sua consulta no dia ${paciente.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`
+//             }  
+//         })
 
-        return autoMsgs;
-    }
+//         return autoMsgs;
+//     }
+
+// 6.
+const contas = [
+	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+	{ cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+	{ cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+	{ cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+	{ cliente: "Soter", saldoTotal: 1200, compras: [] }
+]
+
+function alteraSaldo(array, valor){
+    array.forEach(conta => {
+        conta.saldoTotal += Number(valor);
+    });
+}
