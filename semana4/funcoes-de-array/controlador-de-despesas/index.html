@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco do Hugo</title>
+</head>
+<body>
+    <main id="container">
+    <section id="cadastro">
+        <h1>Cadastro de Despesa</h1>
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor">
+        <label for="tipo-despesa">Tipo:</label>
+        <select name="tipo-despesa" id="tipo-despesa">
+            <option value="''"></option>
+            <option value="de Casa">Despesas de casa</option>
+            <option value="de Viagem">Despesas de viagem</option>
+            <option value="Outros">Outros</option>
+        </select>
+        <label for="descricao">Descrição:</label>
+        <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+        <button id="cadastrar" onclick="adicionarAoArray()">Cadastrar</button>
+    </section>
+    <section id="lista-completa">
+        <h1>Lista Completa de Despesas</h1>
+        <label for="tipo">Tipo:</label>
+        <select name="tipo" id="tipo">
+            <option value=""></option>
+            <option value="de Casa">Despesas de casa</option>
+            <option value="de Viagem">Despesas de viagem</option>
+            <option value="Outros">Outros</option>
+        </select>
+        <label for="valor-min">Valor mínimo:</label>
+        <input type="number" id="valor-min">
+        <label for="valor-max">Valor máximo:</label>
+        <input type="number" id="valor-max">
+        <button id="filtrar" onclick="filtrado()">Filtrar</button>
+        <button id="limpar" onclick="limparFiltros()">Limpar filtros</button>
+        <ul id="lista">
+            
+        </ul>
+    </section>
+    <section id="extrato">
+        <h1>Extrato</h1>
+        <ul id="extrato-lista"></ul>
+        <h2 id="valor-total">Valor total:</h1>
+    </section>
+</main>
+</body>
+</html>
