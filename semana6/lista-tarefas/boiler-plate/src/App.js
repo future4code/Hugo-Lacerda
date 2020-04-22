@@ -46,8 +46,12 @@ class App extends React.Component {
       completa: false,
     };
 
-    const novasTarefas = [...this.state.tarefas, novaTarefa];
-
+    let novasTarefas;
+    if(this.state.tarefas !== null){
+    novasTarefas = [...this.state.tarefas, novaTarefa];
+    }else{
+      novasTarefas = [novaTarefa];
+    }
     const completas = novasTarefas.filter(tarefa=>{
       return tarefa.completa;
     })
@@ -115,7 +119,9 @@ class App extends React.Component {
   }
 
   render(){
-    const listaFiltrada = this.state.tarefas.filter((tarefa) => {
+    let listaFiltrada;
+    if(this.state.tarefas !== null){
+    listaFiltrada = this.state.tarefas.filter((tarefa) => {
       switch (this.state.filter) {
         case "pendentes":
           return !tarefa.completa;
@@ -125,6 +131,10 @@ class App extends React.Component {
           return true;
       }
     });
+  }
+  else{
+    listaFiltrada = [];
+  }
 
     return (
       <div className="App">
