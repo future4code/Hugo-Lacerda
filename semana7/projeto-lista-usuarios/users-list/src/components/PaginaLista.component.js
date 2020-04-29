@@ -7,7 +7,7 @@ export default class PaginaLista extends React.Component{
             <ul>
                 {this.props.lista.map(usuario =>{
                     return (
-                        <li>{usuario.name}</li>
+                        <li key={usuario.id} data-key={usuario.id}><span onClick={this.props.onClickInfo} data-key={usuario.id}>{usuario.name}</span> ||| <strong onClick={this.props.onClickDel} data-key={usuario.id}>X</strong></li>
                     )
                 })}
             </ul>
