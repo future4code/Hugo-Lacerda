@@ -38,16 +38,22 @@ function TelaInicial(props) {
   const [ perfil, setPerfil ] = useState({});
 
   useEffect(() => {
+  let mounted = true;
   axios.
   get(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/hugo/person`)
   .then( res => {
+    if(mounted){
     setId(res.data.profile.id);
     setPerfil(res.data.profile);
+    }
   }
     )
   .catch(err => 
     console.log(err)
     )
+
+    return () => mounted = false;
+
   }, [])
 
   const onHeartClick = () => {

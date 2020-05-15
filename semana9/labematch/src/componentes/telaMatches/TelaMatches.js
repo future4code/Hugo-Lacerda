@@ -61,14 +61,21 @@ function TelaMatches(props) {
     const [matches, setMatches] = useState([]);
     
     useEffect(() => {
+        let mounted = true;
         axios
         .get(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/hugo/matches`)
         .then(res =>{
+            if(mounted){
             setMatches(res.data.matches)
+            }
         })
         .catch(err => {
             console.log(err);
         })
+    
+        return () => mounted = false;
+
+
     }, [ matches ])
 
     const listaMatches = matches.map( match => {
