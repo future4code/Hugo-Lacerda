@@ -44,9 +44,8 @@ const ProfileImg = styled.img`
 const ProfileImgBox = styled.span`
   height: 50px;
   width: 50px;
-    border-radius: 100%;
-    margin-right: 10px;
-
+  border-radius: 100%;
+  margin-right: 10px;
 `;
 const ProfileMin = styled.p`
   display: flex;
@@ -57,39 +56,34 @@ const ProfileMin = styled.p`
 `;
 
 function TelaMatches(props) {
+  const [matches, setMatches] = useState([]);
 
-    const [matches, setMatches] = useState([]);
-    
-    useEffect(() => {
-        let mounted = true;
-        axios
-        .get(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/hugo/matches`)
-        .then(res =>{
-            if(mounted){
-            setMatches(res.data.matches)
-            }
-        })
-        .catch(err => {
-            console.log(err);
-        })
-    
-        return () => mounted = false;
+  useEffect(() => {
+    axios
+      .get(
+        `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/hugo/matches`
+      )
+      .then((res) => {
+        setMatches(res.data.matches);
+        console.log(res.data.matches);
+      });
+  }, []);
 
-
-    }, [ matches ])
-
-    const listaMatches = matches.map( match => {
-        return (
-        <ProfileMin key={match.key}><ProfileImgBox><ProfileImg src={match.photo}/></ProfileImgBox> <strong>{match.name}</strong></ProfileMin>
-        )
-    })
+  const listaMatches = matches.map((match) => {
     return (
+      <ProfileMin key={match.key}>
+        <ProfileImgBox>
+          <ProfileImg src={match.photo} />
+        </ProfileImgBox>{" "}
+        <strong>{match.name}</strong>
+      </ProfileMin>
+    );
+  });
+  return (
     <MainDiv>
       <SPContainerHeader title="LabeMatch" />
       <SwipeMoreIcon onClick={props.pageHandler} />
-      <MatchesSect>
-          {listaMatches}
-      </MatchesSect>
+      <MatchesSect>{listaMatches}</MatchesSect>
     </MainDiv>
   );
 }

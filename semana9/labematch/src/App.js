@@ -62,8 +62,6 @@ const pageHandler = () =>{
 const resetAll = () => {
   axios
   .put(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/hugo/clear`)
-  .then( res => console.log(res))
-  .catch(err => console.log(err))
 }
   return (
     <MainContainer>
