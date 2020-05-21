@@ -1,46 +1,152 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { useForm } from "react-hook-form";
-import { Button, TextField, Card} from "@material-ui/core"
-import styled from "styled-components"
+import { makeStyles } from '@material-ui/core/styles';
+import { Button, TextField, Card, Select, InputLabel, MenuItem, FormControl } from "@material-ui/core";
+import styled from "styled-components";
+import axios from "axios";
 
 const FormStyle = styled.form`
-display: grid;
-grid-template-columns: auto-fill;
-grid-gap: 20px;
-margin: 20px 200px 40px 200px;
-@media screen and (max-width:800px){
+  display: grid;
+  grid-template-columns: auto-fill;
+  grid-gap: 20px;
+  margin: 20px 200px 40px 200px;
+  @media screen and (max-width: 800px) {
     margin: 20px 100px 40px 100px;
-}
-@media screen and (max-width:600px){
+  }
+  @media screen and (max-width: 600px) {
     margin: 20px 0px 40px 0px;
-}
-`
+  }
+`;
 const TituloForm = styled.h1`
-text-align: center;
-`
+  text-align: center;
+`;
+
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    margin: 0,
+    minWidth: 120,
+  },
+  inputLabel: {
+    paddingLeft: 20,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
 
 const ApplicantForm = () => {
+  const { register, handleSubmit } = useForm();
+  const classes = useStyles();
+  const [trip, setTrip] = useState('');
+  const [country, setCountry] = useState('');
+  const [tripList, setTripList] = useState([]);
+  const [countriesList, setCountriesList] = useState([]);
 
-const {register, handleSubmit} = useForm();
+  useEffect(() => {
+    axios
+    .get(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/hugo/trips`)
+    .then(res => setTripList(res.data.trips))
+    .catch(err => console.log(err))
+    axios
+    .get(`https://restcountries.eu/rest/v2/all`)
+    .then(res => setCountriesList(res.data))
+    .catch(err => console.log(err))
 
-const onSubmit = (data) =>{
-    console.log(data)
-}
+  }, [])
+
+  const handleTripChange = (e) => {
+    setTrip(e.target.value);
+  };
+  const handleCountryChange = (e) => {
+    setCountry(e.target.value);
+  };
+
+  const onSubmit = (data) => {
+    console.log(data);
+    // axios
+    //   .post(
+    //     `https://us-central1-labenu-apis.cloudfunctions.net/labeX/hugo/trips/${data.trip}/apply`,
+    //     data
+    //   )
+    //   .then((res) => console.log(res))
+    //   .catch((err) => console.log(err));
+  };
 
   return (
     <div>
       <Card>
-      <TituloForm>Formulário de Inscrição</TituloForm>
+        <TituloForm>Formulário de Inscrição</TituloForm>
         <FormStyle onSubmit={handleSubmit(onSubmit)}>
-            <TextField type="text" variant="outlined" label="Nome" name="name" inputRef={register}/>
-            <TextField variant="outlined" label="Idade" name="age" inputRef={register}/>
-            <TextField variant="outlined" label="Por que se considera um bom candidato?" name="applicationText" multiline rows="10" inputRef={register}/>
-            <TextField variant="outlined" label="Profissão" name="profession" inputRef={register}/>
-            <TextField variant="outlined" label="País de origem" name="country" inputRef={register}/>
-            <TextField variant="outlined" label="Viagem" name="trip" inputRef={register}/>
-            <Button type="submit">Enviar inscrição</Button>
+          <TextField
+            type="text"
+            variant="outlined"
+            label="Nome"
+            name="name"
+            inputRef={register}
+          />
+          <TextField
+            variant="outlined"
+            label="Idade"
+            name="age"
+            inputRef={register}
+          />
+          <TextField
+            variant="outlined"
+            label="Por que se considera um bom candidato?"
+            name="applicationText"
+            multiline
+            rows="10"
+            inputRef={register}
+          />
+          <TextField
+            variant="outlined"
+            label="Profissão"
+            name="profession"
+            inputRef={register}
+          />
+      <FormControl variant="outlined" className={classes.formControl}>
+        <InputLabel htmlFor="pais-label">País de origem</InputLabel>
+        <Select
+          native
+          value={country}
+          onChange={handleCountryChange}
+          label="País de origem"
+          inputProps={{
+            name: 'country',
+            id: 'country-label',
+          }}
+        inputRef={register}>
+          <option aria-label="None" value="" />
+          {countriesList.map(country => {
+            return (
+              <option value={country.name}>{country.name}</option>
+            )
+          })}
+        </Select>
+        </FormControl>
+      <FormControl variant="outlined" className={classes.formControl}>
+        <InputLabel htmlFor="viagem-label">Viagem</InputLabel>
+        <Select
+          native
+          value={trip}
+          onChange={handleTripChange}
+          label="Viagem"
+          inputProps={{
+            name: 'trip',
+            id: 'viagem-label',
+          }}
+        inputRef={register}>
+          <option aria-label="None" value="" />
+          {tripList.map(trip => {
+            return (
+              <option value={trip.id}>{trip.name}</option>
+            )
+          })}
+        </Select>
+        </FormControl>
+          <Button type="submit">Enviar inscrição</Button>
         </FormStyle>
-        </Card>
+      </Card>
     </div>
   );
 };
