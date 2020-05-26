@@ -9,7 +9,7 @@ const FormStyle = styled.form`
   display: grid;
   grid-template-columns: auto-fill;
   grid-gap: 20px;
-  margin: 20px 200px 40px 200px;
+  margin: 20px 30px 40px 30px;
   @media screen and (max-width: 800px) {
     margin: 20px 100px 40px 100px;
   }
@@ -17,6 +17,12 @@ const FormStyle = styled.form`
     margin: 20px 0px 40px 0px;
   }
 `;
+
+const CardStyle = styled(Card)`
+width: 800px;
+margin: 0 auto;
+`
+
 const TituloForm = styled.h1`
   text-align: center;
 `;
@@ -74,7 +80,7 @@ const ApplicantForm = () => {
 
   return (
     <div>
-      <Card>
+      <CardStyle>
         <TituloForm>Formulário de Inscrição</TituloForm>
         <FormStyle onSubmit={handleSubmit(onSubmit)}>
           <TextField
@@ -146,7 +152,7 @@ const ApplicantForm = () => {
         </FormControl>
           <Button type="submit">Enviar inscrição</Button>
         </FormStyle>
-      </Card>
+      </CardStyle>
     </div>
   );
 };
