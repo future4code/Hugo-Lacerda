@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, useHistory } from "react-router";
-
+import TripList from "./TripList"
 const TripListApplicantPage = () => {
   const pathParams = useParams();
   const history = useHistory();
@@ -12,6 +12,7 @@ const TripListApplicantPage = () => {
   return (
     <div>
       <h1>Trip List Applicant Page</h1>
+      <TripList/>
     </div>
   );
 };

@@ -64,8 +64,12 @@ const TripForm = () => {
           <TextField
             variant="outlined"
             label="Data"
+            type="date"
             name="date"
             inputRef={register}
+            InputLabelProps={{
+              shrink: true,
+            }}
           />
           <TextField
             variant="outlined"
@@ -77,6 +81,7 @@ const TripForm = () => {
           />
           <TextField
             variant="outlined"
+            type="number"
             label="Duração em dias"
             name="durationInDays"
             inputRef={register}

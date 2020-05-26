@@ -92,6 +92,7 @@ const ApplicantForm = () => {
           />
           <TextField
             variant="outlined"
+            type="number"
             label="Idade"
             name="age"
             inputRef={register}
