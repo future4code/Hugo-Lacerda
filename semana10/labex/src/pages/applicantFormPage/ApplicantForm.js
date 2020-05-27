@@ -89,6 +89,11 @@ const ApplicantForm = () => {
             label="Nome"
             name="name"
             inputRef={register}
+            inputProps={{
+              pattern: `[A-Za-z]{3,}`,
+              title: "O nome deve conter no mínimo 3 letras "
+            }}
+            required
           />
           <TextField
             variant="outlined"
@@ -96,20 +101,34 @@ const ApplicantForm = () => {
             label="Idade"
             name="age"
             inputRef={register}
+            inputProps={{
+              min: 18,
+              title: "É preciso ter ao menos 18 anos para se candidatar"
+            }}
+            required
           />
           <TextField
             variant="outlined"
             label="Por que se considera um bom candidato?"
             name="applicationText"
-            multiline
             rows="10"
             inputRef={register}
+            inputProps={{
+              pattern: "[A-Za-z0-9]{30,}",
+              title: "Este texto deve contar ao menos 30 caracteres"
+            }}
+            required
           />
           <TextField
             variant="outlined"
             label="Profissão"
             name="profession"
             inputRef={register}
+            inputProps={{
+              pattern:"[A-Za-z]{10,}",
+              title: "Este campo deve conter ao menos 10 letras."
+            }}
+            required
           />
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel htmlFor="pais-label">País de origem</InputLabel>
@@ -123,7 +142,8 @@ const ApplicantForm = () => {
             id: 'country-label',
           }}
         inputRef={register}>
-          <option aria-label="None" value="" />
+          <option aria-label="None" value="" 
+          required/>
           {countriesList.map(country => {
             return (
               <option value={country.name}>{country.name}</option>
@@ -146,7 +166,7 @@ const ApplicantForm = () => {
           <option aria-label="None" value="" />
           {tripList.map(trip => {
             return (
-              <option value={trip.id}>{trip.name}</option>
+            <option value={trip.id}>{trip.name} - {trip.planet}</option>
             )
           })}
         </Select>

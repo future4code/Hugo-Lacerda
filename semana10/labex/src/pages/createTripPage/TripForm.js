@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Button, TextField, Card } from "@material-ui/core";
+import {
+  Button,
+  TextField,
+  Card,
+  FormControl,
+  InputLabel,
+  Select,
+} from "@material-ui/core";
 import styled from "styled-components";
 import axios from "axios";
 
@@ -27,12 +34,14 @@ const TituloForm = styled.h1`
 
 const TripForm = () => {
   const { register, handleSubmit } = useForm();
+  const [planet, setPlanet] = useState("");
 
   const onSubmit = (data) => {
+    const auth = window.localStorage.getItem("token");
+    console.log(auth);
     const headers = {
       "Content-Type": "application/json",
-      auth:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ik1XYmhndXdCM1JqcU12TzBubkJmIiwiZW1haWwiOiJhc3Ryb2RldkBnbWFpbC5jb20uYnIiLCJpYXQiOjE1OTAwNjYwMzF9.EWoorwwPyS-3fGwhLTuCE9jtWmLCSGlcD0A82g6CaKA",
+      auth: auth,
     };
     axios
       .post(
@@ -43,7 +52,13 @@ const TripForm = () => {
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
+  const handlePlanetChange = (e) => {
+    setPlanet(e.target.value);
+  };
 
+  const dateNow = () =>{
+    console.log(new Date().toISOString().substring(0,10))
+  }
   return (
     <div>
       <CardStyle>
@@ -54,41 +69,83 @@ const TripForm = () => {
             label="Nome"
             name="name"
             inputRef={register}
+            inputProps={{
+              pattern: "[A-Za-z ]{5,}",
+              title: "O nome da viagem deve conter no mínimo 5 letras",
+            }}
+            required
           />
-          <TextField
-            variant="outlined"
-            label="Planeta"
-            name="planet"
-            inputRef={register}
-          />
+          <FormControl variant="outlined">
+            <InputLabel htmlFor="planets-label">Planeta</InputLabel>
+            <Select
+              native
+              value={planet}
+              onChange={handlePlanetChange}
+              label="Planeta"
+              inputProps={{
+                name: "planet",
+                id: "planets-label",
+                pattern: "[A-Za-z ]{1,}",
+                title: "Escolha um dos planetas",
+              }}
+              inputRef={register}
+              required
+            >
+              <option aria-label="None" value="" />
+              <option value="Mercurio">Mercurio</option>
+              <option value="Venus">Venus</option>
+              <option value="Terra">Terra</option>
+              <option value="Marte">Marte</option>
+              <option value="Júpiter">Júpiter</option>
+              <option value="Saturno">Saturno</option>
+              <option value="Uranu">Uranu</option>
+              <option value="Netuno">Netuno</option>
+            </Select>
+          </FormControl>
           <TextField
             variant="outlined"
             label="Data"
             type="date"
             name="date"
             inputRef={register}
+            format= "YYYY-MM-DD"
             InputLabelProps={{
               shrink: true,
             }}
+            inputProps={{
+            }}
+            required
           />
           <TextField
             variant="outlined"
             label="Descrição"
             name="description"
-            multiline
             rows="10"
             inputRef={register}
+            inputProps={{
+              pattern: "[A-Za-z ]{30,}",
+              minlenght: 30,
+              title: "A descrição deve conter no mínimo 30 letras"
+            }}
+            required
           />
           <TextField
             variant="outlined"
             type="number"
             label="Duração em dias"
             name="durationInDays"
+            inputProps={
+              {
+                min: 50,
+              }
+            }
             inputRef={register}
+            required
           />
           <Button type="submit">Enviar inscrição</Button>
         </FormStyle>
       </CardStyle>
+      <Button onClick={dateNow}>DATA</Button>
     </div>
   );
 };
