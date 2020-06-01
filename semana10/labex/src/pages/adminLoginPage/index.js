@@ -20,11 +20,7 @@ const AdminLoginPage = () => {
 
   return (
     <div>
-      <h1>Admin Login Page</h1>
       <LoginForm/>
-      <Button variant='outlined' color='secondary' onClick={goToTripListAdminPage}>Ver lista</Button>
-      <Button variant='outlined' color='secondary' onClick={goToCreateTripPage}>Criar viagem</Button>
-      <Button variant='contained' onClick={goToHomePage}>Voltar para a página inicial</Button>
     </div>
   );
 };

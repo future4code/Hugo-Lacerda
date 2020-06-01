@@ -16,12 +16,6 @@ const FormStyle = styled.form`
   grid-template-columns: auto-fill;
   grid-gap: 20px;
   margin: 20px 30px 40px 30px;
-  @media screen and (max-width: 800px) {
-    margin: 20px 100px 40px 100px;
-  }
-  @media screen and (max-width: 600px) {
-    margin: 20px 0px 40px 0px;
-  }
 `;
 
 const CardStyle = styled(Card)`
@@ -33,12 +27,13 @@ const TituloForm = styled.h1`
 `;
 
 const TripForm = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, errors } = useForm();
   const [planet, setPlanet] = useState("");
 
   const onSubmit = (data) => {
     const auth = window.localStorage.getItem("token");
     console.log(auth);
+    console.log(data);
     const headers = {
       "Content-Type": "application/json",
       auth: auth,
@@ -55,10 +50,6 @@ const TripForm = () => {
   const handlePlanetChange = (e) => {
     setPlanet(e.target.value);
   };
-
-  const dateNow = () =>{
-    console.log(new Date().toISOString().substring(0,10))
-  }
   return (
     <div>
       <CardStyle>
@@ -121,13 +112,10 @@ const TripForm = () => {
             label="Descrição"
             name="description"
             rows="10"
-            inputRef={register}
-            inputProps={{
-              pattern: "[A-Za-z ]{30,}",
-              minlenght: 30,
-              title: "A descrição deve conter no mínimo 30 letras"
-            }}
+            inputRef={register({pattern: /^[\w\s.,:;!?€¥£¢$-]{30,}$/, title: "A descrição deve conter no mínimo 30 letras"})}
+            multiline
             required
+          helperText={errors.description && 'Digite ao menos 30 caracteres na descrição.'}
           />
           <TextField
             variant="outlined"
@@ -145,7 +133,6 @@ const TripForm = () => {
           <Button type="submit">Enviar inscrição</Button>
         </FormStyle>
       </CardStyle>
-      <Button onClick={dateNow}>DATA</Button>
     </div>
   );
 };

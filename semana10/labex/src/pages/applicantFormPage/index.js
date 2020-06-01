@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, useHistory } from "react-router";
 import ApplicantForm from "./ApplicantForm"
+import UserNav from "../../NavBars/UserNav"
 const ApplicantFormPage = () => {
   const pathParams = useParams();
   const history = useHistory();
@@ -11,7 +12,7 @@ const ApplicantFormPage = () => {
 
   return (
     <div>
-      <h1>Applicant Form Page</h1>
+      <UserNav/>
       <ApplicantForm/>
     </div>
   );

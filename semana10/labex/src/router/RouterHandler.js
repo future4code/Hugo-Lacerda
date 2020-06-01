@@ -26,7 +26,7 @@ export default function RouterHandler() {
           <Route path="/applicant_page" exact component={ApplicantPage} />
           <Route path="/applicant_page/form" exact component={ApplicantFormPage} />
           <Route path="/applicant_page/trip_list" exact component={TripListApplicantPage} />
-          <Route path="/applicant_page/trip_list:id" exact component={TripDetailsApplicantPage} />
+          <Route path="/applicant_page/trip_list/:id" exact component={TripDetailsApplicantPage} />
         </Switch>
       </div>
     </Router>

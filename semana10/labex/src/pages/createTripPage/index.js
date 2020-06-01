@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, useHistory } from "react-router";
 import { Button } from '@material-ui/core'
 import TripForm from './TripForm'
+import AdminNav from "../../NavBars/AdminNav";
 
 const CreateTripPage = () => {
   const pathParams = useParams();
@@ -16,9 +17,7 @@ const CreateTripPage = () => {
 
   return (
     <div>
-      <h1>Create Trip Page</h1>
-      <Button variant='outlined' color='secondary' onClick={goToTripListAdminPage}>Ver lista</Button>
-      <Button variant='contained' onClick={goToAdminLoginPage}>Voltar para a página admin login</Button>
+      <AdminNav/>
       <TripForm/>
     </div>
   );

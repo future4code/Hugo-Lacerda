@@ -15,28 +15,19 @@ const TripListAdminPage = () => {
   const goToAdminLoginPage = () => {
     history.push("/admin/login");
   };
-  const goToCreateTripPage = () => {
-    history.push("/admin/create_trip");
-  };
+
   useEffect(() => {
     const token = localStorage.getItem("token");
 
     if (token === null) {
-      history.push("/");
+      history.push("/admin/login");
     }
   }, [ history ]);
-  const handleLogout = () =>{
-    window.localStorage.clear();
-  }
 
   return (
     <div>
       <AdminNav/>
-      <h1>Trip List Admin Page</h1>
-      <Button variant='outlined' color='secondary' onClick={goToCreateTripPage}>Criar viagem</Button>
-      <Button variant='outlined' color='secondary' onClick={goToDetailsPage}>Ver detalhes</Button>
-      <Button variant='contained' onClick={goToAdminLoginPage}>Voltar para a página admin login</Button>
-      <Button variant='contained' onClick={handleLogout}>Logout</Button>
+      
       <TripList/>
     </div>
   );

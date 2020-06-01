@@ -12,6 +12,9 @@ const FormStyle = styled.form`
   grid-template-columns: auto-fill;
   grid-gap: 20px;
   margin: 20px 30px 40px 30px;
+  h1{
+    text-align: center;
+  }
   @media screen and (max-width: 800px) {
     margin: 20px 100px 40px 100px;
   }
@@ -22,34 +25,13 @@ const FormStyle = styled.form`
 
 const CardStyle = styled(Card)`
   width: 400px;
-  margin: 0 auto;
+  margin: 100px auto;
 `;
 
 const LoginForm = () => {
   const history = useHistory();
   const { register, handleSubmit } = useForm();
-  // const onSubmit = (data) => {
-  //   console.log(data);
-  //   var canPass = false;
-  //   axios
-  //     .post(
-  //       `https://us-central1-labenu-apis.cloudfunctions.net/labeX/hugo/login`,
-  //       data
-  //     )
-  //     .then((res) => {
-  //       if(res.status === 200){
-  //         history.push("/admin/trip_list");
-  //       }
-  //     })
-  //     .catch((err) => console.log(err));
-
-  //     console.log(canPass)
-
-  //     if(canPass){
-  //       history.push("/admin/trip_list");
-  //     }
-  // };
-
+  
   const handleLogin = async (data) => {
     try {
       const response = await axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/hugo/login`, data);
@@ -60,9 +42,14 @@ const LoginForm = () => {
     }
   };
   
+  const goToHomePage = () => {
+    history.push("/");
+  };
+
   return (
     <CardStyle>
       <FormStyle onSubmit={handleSubmit(handleLogin)}>
+        <h1>Login</h1>
         <TextField
           type="email"
           variant="outlined"
@@ -78,6 +65,7 @@ const LoginForm = () => {
           inputRef={register}
         />
         <Button type="submit">Entrar</Button>
+        <Button onClick={goToHomePage}>Página Inicial</Button>
       </FormStyle>
     </CardStyle>
   );
