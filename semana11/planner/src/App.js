@@ -74,7 +74,7 @@ function App() {
           `https://us-central1-labenu-apis.cloudfunctions.net/generic/planner-julian-hugo`,
           body
         )
-        .then((res) => console.log(res.data))
+        .then((res) => console.log(res))
         .catch((err) => console.log(err));
 
       setInputValue("");
@@ -87,16 +87,20 @@ function App() {
       <InputContainer>
         <TextField
           label="Nova tarefa"
+          placeholder="Nova tarefa"
           onChange={handleInput}
           value={inputValue}
         />
         <StyledFormControl>
           <InputLabel id="day-select-label">Dia da semana</InputLabel>
           <Select
-            labelId="day-select-label"
+            label='Dia da semana'
+            inputProps={{ 'aria-label': 'Dia da semana', 'name': 'Dia da semana' }}
             id="day-select"
+            data
             value={day}
             onChange={handleSelect}
+
           >
             <MenuItem value="Segunda">Segunda</MenuItem>
             <MenuItem value="Terça">Terça</MenuItem>
@@ -108,7 +112,7 @@ function App() {
           </Select>
         </StyledFormControl>
         <Fab variant="extended" size="small" onClick={onAddTask}>
-          <AddIcon />
+          <AddIcon /> Adicionar
         </Fab>
       </InputContainer>
       <WeekDaysContainer>
@@ -119,7 +123,7 @@ function App() {
               return task.day === "Segunda";
             })
             .map((task) => (
-              <p>{task.text}</p>
+              <p data-key={task.id} data-testid={'monday-task'} key={task.id}>{task.text}</p>
             ))}
         </DayCard>
         <DayCard>
@@ -129,7 +133,7 @@ function App() {
               return task.day === "Terça";
             })
             .map((task) => (
-              <p>{task.text}</p>
+              <p data-key={task.id} data-testid={'tuesday-task'} key={task.id}>{task.text}</p>
             ))}
 
         </DayCard>
@@ -140,7 +144,7 @@ function App() {
               return task.day === "Quarta";
             })
             .map((task) => (
-              <p>{task.text}</p>
+              <p data-key={task.id} data-testid={'wednesday-task'} key={task.id}>{task.text}</p>
             ))}
 
         </DayCard>
@@ -151,7 +155,7 @@ function App() {
               return task.day === "Quinta";
             })
             .map((task) => (
-              <p>{task.text}</p>
+              <p data-key={task.id} data-testid={'thursday-task'} key={task.id}>{task.text}</p>
             ))}
         </DayCard>
         <DayCard>
@@ -161,7 +165,7 @@ function App() {
               return task.day === "Sexta";
             })
             .map((task) => (
-              <p>{task.text}</p>
+              <p data-key={task.id} data-testid={'friday-task'} key={task.id}>{task.text}</p>
             ))}
         </DayCard>
         <DayCard>
@@ -171,7 +175,7 @@ function App() {
               return task.day === "Sábado";
             })
             .map((task) => (
-              <p>{task.text}</p>
+              <p data-key={task.id} data-testid={'saturday-task'} key={task.id}>{task.text}</p>
             ))}
         </DayCard>
         <DayCard>
@@ -181,7 +185,7 @@ function App() {
               return task.day === "Domingo";
             })
             .map((task) => (
-              <p>{task.text}</p>
+              <p data-key={task.id} data-testid={'sunday-task'} key={task.id}>{task.text}</p>
             ))}
 
         </DayCard>
