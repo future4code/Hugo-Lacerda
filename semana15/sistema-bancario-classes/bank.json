@@ -1,0 +1,22 @@
+[
+  {
+    "balance": 0,
+    "transactions": [],
+    "name": "Nino",
+    "age": 30,
+    "cpf": "382949020-1"
+  },
+  {
+    "balance": 300,
+    "transactions": [
+      {
+        "date": 1231241234,
+        "value": 300,
+        "description": "Saldo adicionado."
+      }
+    ],
+    "name": "Kira",
+    "age": 40,
+    "cpf": "35349020-1"
+  }
+]
