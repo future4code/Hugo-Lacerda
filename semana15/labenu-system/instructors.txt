@@ -5,9 +5,9 @@
     "email": "inst@one.com",
     "birthdate": "1990-10-10T03:00:00.000Z",
     "specializations": [
-      "REACT",
-      "TESTES",
-      "REDUX"
+      "React",
+      "Testes",
+      "Redux"
     ]
   },
   {
@@ -16,8 +16,8 @@
     "email": "inst@two.com",
     "birthdate": "1991-10-10T03:00:00.000Z",
     "specializations": [
-      "BACKEND",
-      "TESTES",
+      "Backend",
+      "Testes",
       "OOP"
     ]
   },
@@ -28,8 +28,8 @@
     "birthdate": "1992-10-10T03:00:00.000Z",
     "specializations": [
       "CSS",
-      "REACT",
-      "REDUX"
+      "React",
+      "Redux"
     ]
   },
   {
@@ -39,7 +39,7 @@
     "birthdate": "1993-10-10T03:00:00.000Z",
     "specializations": [
       "OOP",
-      "TYPESCRIPT"
+      "Typescript"
     ]
   },
   {
@@ -48,11 +48,11 @@
     "email": "inst@five.com",
     "birthdate": "1994-10-10T03:00:00.000Z",
     "specializations": [
-      "REACT",
-      "TESTES",
-      "REDUX",
+      "React",
+      "Testes",
+      "Redux",
       "OOP",
-      "TYPESCRIPT"
+      "Typescript"
     ]
   }
 ]

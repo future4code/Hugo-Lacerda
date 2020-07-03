@@ -26,12 +26,12 @@ class Instuctor {
 exports.default = Instuctor;
 var SPECIALIZATION;
 (function (SPECIALIZATION) {
-    SPECIALIZATION["REACT"] = "REACT";
-    SPECIALIZATION["REDUX"] = "REDUX";
+    SPECIALIZATION["REACT"] = "React";
+    SPECIALIZATION["REDUX"] = "Redux";
     SPECIALIZATION["CSS"] = "CSS";
-    SPECIALIZATION["TESTES"] = "TESTES";
-    SPECIALIZATION["TYPESCRIPT"] = "TYPESCRIPT";
+    SPECIALIZATION["TESTES"] = "Testes";
+    SPECIALIZATION["TYPESCRIPT"] = "Typescript";
     SPECIALIZATION["OOP"] = "OOP";
-    SPECIALIZATION["BACKEND"] = "BACKEND";
+    SPECIALIZATION["BACKEND"] = "Backend";
 })(SPECIALIZATION = exports.SPECIALIZATION || (exports.SPECIALIZATION = {}));
 //# sourceMappingURL=Instructor.class.js.map

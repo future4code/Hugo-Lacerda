@@ -28,11 +28,11 @@ export default class Instuctor implements User {
 }
 
 export enum SPECIALIZATION {
-  REACT = "REACT",
-  REDUX = "REDUX",
+  REACT = "React",
+  REDUX = "Redux",
   CSS = "CSS",
-  TESTES = "TESTES",
-  TYPESCRIPT = "TYPESCRIPT",
+  TESTES = "Testes",
+  TYPESCRIPT = "Typescript",
   OOP = "OOP",
-  BACKEND = "BACKEND",
+  BACKEND = "Backend",
 }
