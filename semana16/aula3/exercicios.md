@@ -191,3 +191,28 @@ app.get("/film/all", async (req: Request, res: Response) => {
 ```
 
 ### Exercício 7
+
+```
+const searchFilms = async (searchFor: string): Promise<any> => {
+  const result = await connection.raw(`
+  SELECT *
+  FROM Film
+  WHERE title LIKE "%${searchFor}%" OR synopsis LIKE "%${searchFor}%"`);
+
+  return result[0][0];
+};
+
+app.get("/film/search", async (req: Request, res: Response) => {
+  try {
+    const films = await searchFilms(req.query.query as string);
+
+    res.status(200).send({
+      films: films,
+    });
+  } catch (err) {
+    res.status(400).send({
+      message: err.message,
+    });
+  }
+});
+```
