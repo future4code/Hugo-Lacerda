@@ -1,0 +1,172 @@
+[
+  {
+    "id": 111,
+    "startDate": "2020-01-08T03:00:00.000Z",
+    "endDate": "2020-07-08T03:00:00.000Z",
+    "currentModule": "SOFTWARE DEV NO MUNDO REAL",
+    "instructors": [
+      {
+        "id": 1,
+        "name": "Inst One",
+        "email": "inst@one.com",
+        "birthdate": "1990-10-10T03:00:00.000Z",
+        "specializations": [
+          "React",
+          "Testes",
+          "Redux"
+        ]
+      }
+    ],
+    "students": [
+      {
+        "id": 1,
+        "name": "Stud One",
+        "email": "student@one.com",
+        "birthdate": "1990-01-01T02:00:00.000Z"
+      },
+      {
+        "id": 2,
+        "name": "Stud Two",
+        "email": "student@two.com",
+        "birthdate": "1991-01-01T02:00:00.000Z"
+      }
+    ],
+    "name": "A"
+  },
+  {
+    "id": 222,
+    "startDate": "2019-12-08T03:00:00.000Z",
+    "endDate": "2020-06-08T03:00:00.000Z",
+    "instructors": [
+      {
+        "id": 2,
+        "name": "Inst Two",
+        "email": "inst@two.com",
+        "birthdate": "1991-10-10T03:00:00.000Z",
+        "specializations": [
+          "Backend",
+          "Testes",
+          "OOP"
+        ]
+      }
+    ],
+    "students": [
+      {
+        "id": 3,
+        "name": "Stud Three",
+        "email": "student@three.com",
+        "birthdate": "1992-01-01T02:00:00.000Z"
+      },
+      {
+        "id": 4,
+        "name": "Stud Four",
+        "email": "student@four.com",
+        "birthdate": "1993-01-01T02:00:00.000Z"
+      }
+    ],
+    "name": "B"
+  },
+  {
+    "id": 333,
+    "startDate": "2020-02-08T03:00:00.000Z",
+    "endDate": "2020-08-08T03:00:00.000Z",
+    "currentModule": "BACKEND",
+    "instructors": [
+      {
+        "id": 3,
+        "name": "Inst Three",
+        "email": "inst@three.com",
+        "birthdate": "1992-10-10T03:00:00.000Z",
+        "specializations": [
+          "CSS",
+          "React",
+          "Redux"
+        ]
+      }
+    ],
+    "students": [
+      {
+        "id": 5,
+        "name": "Stud 5",
+        "email": "student@five.com",
+        "birthdate": "1994-01-01T02:00:00.000Z"
+      },
+      {
+        "id": 6,
+        "name": "Stud Six",
+        "email": "student@six.com",
+        "birthdate": "1995-01-01T02:00:00.000Z"
+      }
+    ],
+    "name": "C"
+  },
+  {
+    "id": 444,
+    "startDate": "2020-03-08T03:00:00.000Z",
+    "endDate": "2020-09-08T03:00:00.000Z",
+    "currentModule": "OOP",
+    "instructors": [
+      {
+        "id": 4,
+        "name": "Inst Four",
+        "email": "inst@four.com",
+        "birthdate": "1993-10-10T03:00:00.000Z",
+        "specializations": [
+          "OOP",
+          "Typescript"
+        ]
+      }
+    ],
+    "students": [
+      {
+        "id": 7,
+        "name": "Stud Seven",
+        "email": "student@seven.com",
+        "birthdate": "1996-01-01T02:00:00.000Z"
+      },
+      {
+        "id": 8,
+        "name": "Stud Eight",
+        "email": "student@eight.com",
+        "birthdate": "1997-01-01T02:00:00.000Z"
+      }
+    ],
+    "name": "D-na-night"
+  },
+  {
+    "id": 555,
+    "startDate": "2020-04-08T03:00:00.000Z",
+    "endDate": "2020-10-08T03:00:00.000Z",
+    "currentModule": "REACT AVANÇADO E HOOKS",
+    "instructors": [
+      {
+        "id": 5,
+        "name": "Inst Five",
+        "email": "inst@five.com",
+        "birthdate": "1994-10-10T03:00:00.000Z",
+        "specializations": [
+          "React",
+          "Testes",
+          "Redux",
+          "OOP",
+          "Typescript"
+        ]
+      }
+    ],
+    "students": [
+      {
+        "id": 9,
+        "name": "Stud Nine",
+        "email": "student@nine.com",
+        "birthdate": "1998-01-01T02:00:00.000Z"
+      },
+      {
+        "id": 10,
+        "name": "Stud Ten",
+        "email": "student@ten.com",
+        "birthdate": "1999-01-01T02:00:00.000Z"
+      }
+    ],
+    "name": "E-na-night"
+  }
+]
