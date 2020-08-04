@@ -1,0 +1,7 @@
+exports.handler = async(event) => {
+    const sum = event.num1 + event.num2;
+	return {
+        statusCode: 200,
+        body: JSON.stringify(sum),
+    };
+}

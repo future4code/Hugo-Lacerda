@@ -1,0 +1,15 @@
+a. Não.
+
+b. Missing input.
+
+c. Missing input.
+
+d. Missing email.
+
+e. Invalid password.
+
+f. User is correct.
+
+g. No bloco if (!user.email).
+
+h. Um objeto user contendo um atributo info que contenha os atributos name, email e password.
